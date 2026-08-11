@@ -1,9 +1,15 @@
 # 📣 WireForge — Marketing AI Prompt Pack
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](./LICENSE) [![Prompts](https://img.shields.io/badge/Prompts-8-orange?style=flat-square)](./system-prompts/) [![GitHub stars](https://img.shields.io/github/stars/srmcguirt/marketing-ai-prompt-pack?style=flat-square)](https://github.com/srmcguirt/marketing-ai-prompt-pack)
+
 **8 expert-level AI prompt templates for marketing professionals and agencies.**  
 Stop getting generic outputs. Start getting campaign-ready results.
 
 > Built by **WireForge** — production-grade AI tools for professionals.
+
+> 💎 **Full pack** with all 8 prompts, few-shot examples, output schemas, and future updates → **[Get it on Gumroad ($49) →](https://srmcguirt.gumroad.com)**
+>
+> 📬 **Free sample prompt** — [subscribe at srmcguirt.github.io](https://srmcguirt.github.io)
 
 ---
 
@@ -252,7 +258,7 @@ Attribution appreciated but not required.
 
 WireForge builds production-grade AI tools for professionals — prompt packs, MCP servers, agent boilerplates, and more.
 
-- 🌐 [wireforge.dev](https://wireforge.dev)
+- 🌐 [wireforge.dev](https://srmcguirt.github.io)
 - 🐙 [github.com/srmcguirt](https://github.com/srmcguirt)
 - 🐦 [@wireforge](https://x.com/wireforge)
 
