@@ -39,6 +39,41 @@ That's what this pack is.
 
 ---
 
+## ⚡ The WireForge Prompt Architecture
+
+Every WireForge prompt follows our **4-Layer Prompt Architecture** — a methodology we developed after studying what separates prompts that produce campaign-ready output from prompts that produce generic marketing fluff.
+
+```
+┌─────────────────────────────────────────────┐
+│  Layer 1: IDENTITY                          │
+│  Senior role + specific experience scope    │
+│  "You've run campaigns with $500K+ budgets" │
+├─────────────────────────────────────────────┤
+│  Layer 2: GUARDRAILS                        │
+│  10-15 behavioral constraints that prevent  │
+│  common AI failure modes in marketing       │
+│  "Never use fake urgency or scarcity"       │
+├─────────────────────────────────────────────┤
+│  Layer 3: OUTPUT BLUEPRINT                  │
+│  Exact section-by-section format — the AI   │
+│  produces structured deliverables, not      │
+│  freeform essays you have to reformat       │
+├─────────────────────────────────────────────┤
+│  Layer 4: EDGE CASE LIBRARY                 │
+│  7-8 specific scenarios (regulated          │
+│  industries, cold vs warm traffic, multi-   │
+│  market campaigns) that trip up generic AI  │
+└─────────────────────────────────────────────┘
+```
+
+**Why this matters:** Most AI prompt packs give you Layer 1 and maybe Layer 3. Without Layers 2 and 4, the AI will produce generic "10 tips" listicles, suggest vanity metrics, or ignore your compliance requirements. Our guardrails and edge cases are sourced from real campaign data and agency workflows.
+
+### The Brief Test™
+
+Every prompt passes the **WireForge Brief Test**: can you hand the output directly to a copywriter, media buyer, or client as a working brief? If it needs a rewrite before it's useful, the prompt isn't done. That's our standard.
+
+---
+
 ## Before & After
 
 ### ❌ Generic prompt
