@@ -2,68 +2,137 @@
   "prompt_name": "Content Calendar Strategist",
   "examples": [
     {
-      "id": 1,
-      "scenario": "B2B SaaS quarterly content plan — 1 marketing manager",
-      "input": {
-        "company": "Formli — no-code form builder with analytics",
-        "goal": "Generate 200 inbound leads per month from content",
-        "audience": "Marketing managers and growth hackers at SaaS companies",
-        "resources": "1 marketing manager, 15 hours/week for content, $500/month for design",
-        "channels": ["Blog (SEO)", "LinkedIn", "Email newsletter", "Twitter/X"],
-        "current_state": "Blog exists with 20 posts, LinkedIn has 800 followers, newsletter 1200 subscribers"
-      },
+      "input": "Create a 1-month content calendar for a B2B SaaS company (HR software). We have a blog, LinkedIn, email newsletter, and a YouTube channel. Team: 1 content marketer, 1 designer. Goal: generate 30 MQLs from content this month.",
       "output": {
-        "content_pillars": [
-          {
-            "name": "Form Optimization & CRO",
-            "why": "High-intent — people searching 'form conversion rate' are potential buyers. Maps directly to product value.",
-            "audience_stage": "TOFU/MOFU",
-            "primary_channel": "Blog (SEO) → LinkedIn repurpose",
-            "content_types": ["How-to guides", "Data studies", "Checklist templates"],
-            "monthly_output": "2 long-form blog posts + 8 LinkedIn posts + 4 newsletter sections"
+        "strategy": {
+          "business_goal_alignment": {
+            "goal": "30 MQLs from content",
+            "approach": "Focus on bottom-of-funnel content that captures existing demand (comparison posts, buying guides, templates) rather than top-of-funnel awareness content"
           },
-          {
-            "name": "No-Code Marketing Stack",
-            "why": "Positions Formli in a broader category — attracts audience beyond just 'form builders'",
-            "audience_stage": "TOFU",
-            "primary_channel": "LinkedIn + Blog",
-            "content_types": ["Tool roundups", "Workflow teardowns", "Guest posts"]
-          },
-          {
-            "name": "Customer Success Stories",
-            "why": "High conversion — readers see themselves in the story and trust the solution",
-            "audience_stage": "MOFU/BOFU",
-            "primary_channel": "Blog + LinkedIn + Email",
-            "content_types": ["Case studies", "Quote graphics", "Before/after data"]
-          }
-        ],
-        "monthly_calendar_week_1": [
-          {"day": "Mon", "channel": "Blog", "type": "How-to", "title": "How to Reduce Form Abandonment Rate by 40%: A Data-Backed Guide", "goal": "Organic traffic — high-intent keyword", "production_hours": 5},
-          {"day": "Tue", "channel": "LinkedIn", "type": "Text post", "hook": "The average contact form converts at 2.3%. Here's why — and what changes it:", "goal": "Engagement — repurpose blog data", "production_hours": 0.5},
-          {"day": "Wed", "channel": "Newsletter", "type": "Weekly roundup", "title": "3 form strategies, 2 no-code tools, 1 insight from our data", "goal": "Retention + traffic", "production_hours": 1.5},
-          {"day": "Thu", "channel": "LinkedIn", "type": "Carousel", "title": "6 form mistakes killing your conversion rate (slides)", "goal": "Shares — repurpose Monday blog", "production_hours": 2},
-          {"day": "Fri", "channel": "Twitter/X", "type": "Thread", "hook": "Most contact forms are conversion disasters. Thread: what to fix and why:", "goal": "Reach new audience", "production_hours": 0.5}
-        ],
-        "repurposing_system": {
-          "source": "1 long-form blog post (4-6 hours)",
-          "derivatives": [
-            "LinkedIn text post — pull the most counterintuitive stat (30 min)",
-            "LinkedIn carousel — top 5 tactics as slides (1.5 hours with designer)",
-            "Twitter/X thread — 8 tweets, one per subhead (30 min)",
-            "Newsletter section — 200-word summary + link (20 min)",
-            "LinkedIn poll — 'Which of these form mistakes is killing your conversion?' (5 min)",
-            "Instagram infographic brief — top 3 stats visualized (brief for designer, 30 min)"
+          "content_pillars": [
+            {"name": "HR Tech Guides", "goal": "SEO traffic → MQLs", "ratio": "40%"},
+            {"name": "Templates & Tools", "goal": "Lead magnets → email capture", "ratio": "30%"},
+            {"name": "Customer Stories", "goal": "Social proof → demo requests", "ratio": "20%"},
+            {"name": "Industry Hot Takes", "goal": "LinkedIn engagement → brand awareness", "ratio": "10%"}
           ],
-          "total_additional_content_from_1_post": "5-6 additional pieces",
-          "total_additional_hours": "2.5-3 hours"
+          "capacity_assessment": "1 content marketer + 1 designer = ~2 blog posts/week, 5 LinkedIn posts/week, 1 newsletter/week, 2 YouTube shorts/month. This is realistic and sustainable."
         },
-        "kpis": {
-          "monthly_targets": [
-            {"metric": "Blog organic sessions", "target": "+15% MoM", "tool": "Google Search Console"},
-            {"metric": "Email signups from content", "target": "50/month", "tool": "ConvertKit"},
-            {"metric": "LinkedIn post engagement rate", "target": ">3%", "tool": "LinkedIn Analytics"},
-            {"metric": "Content-attributed leads", "target": "100/month by month 3", "tool": "HubSpot UTM tracking"}
+        "calendar": {
+          "week_1": {
+            "theme": "New Year HR Planning",
+            "content": [
+              {"day": "Mon", "channel": "Blog", "title": "Complete Guide to HR Software for Growing Teams (50-200 employees)", "keyword": "HR software for growing companies", "type": "Comparison guide, 2500 words", "cta": "Free HR Software Comparison Checklist (gated PDF)", "owner": "Content marketer"},
+              {"day": "Mon", "channel": "LinkedIn", "title": "Post: 'The 3 HR tools every 50-person company actually needs (and the 5 they waste money on)'", "type": "Text post with carousel", "owner": "Content marketer"},
+              {"day": "Tue", "channel": "LinkedIn", "title": "Customer story: How [Customer] reduced onboarding time from 2 weeks to 2 days", "type": "Narrative post", "owner": "Content marketer"},
+              {"day": "Wed", "channel": "Email", "title": "Newsletter: 'HR planning for Q1: what to prioritize'", "type": "Newsletter with blog link + template offer", "owner": "Content marketer"},
+              {"day": "Thu", "channel": "LinkedIn", "title": "Hot take: 'Annual performance reviews are dead. Here's what replaces them.'", "type": "Text post (opinion)", "owner": "Content marketer"},
+              {"day": "Thu", "channel": "Blog", "title": "Free Employee Onboarding Checklist Template", "keyword": "employee onboarding checklist", "type": "Template post, 1200 words + downloadable template", "cta": "Download template (gated)", "owner": "Content marketer + Designer"},
+              {"day": "Fri", "channel": "LinkedIn", "title": "Repurpose: Key stats from the HR software comparison guide as a carousel", "type": "Carousel (5 slides)", "owner": "Designer"}
+            ]
+          },
+          "week_2": {
+            "theme": "Employee Experience",
+            "content": [
+              {"day": "Mon", "channel": "Blog", "title": "[Product] vs BambooHR vs Gusto: Honest Comparison for Small Teams", "keyword": "BambooHR alternative", "type": "Comparison post, 3000 words", "cta": "Book a demo to see the difference", "owner": "Content marketer"},
+              {"day": "Tue", "channel": "LinkedIn", "title": "Post: Data from 500 HR leaders on what employees actually want in 2026", "type": "Data-driven post with custom graphic", "owner": "Content marketer + Designer"},
+              {"day": "Wed", "channel": "Email", "title": "Newsletter: 'The comparison post you've been waiting for' + exclusive discount", "type": "Newsletter", "owner": "Content marketer"},
+              {"day": "Wed", "channel": "YouTube", "title": "60-sec product demo: Setting up your first onboarding workflow", "type": "YouTube Short", "owner": "Content marketer"},
+              {"day": "Thu", "channel": "LinkedIn", "title": "Carousel: 5 red flags your HR software has outgrown your team", "type": "Carousel", "owner": "Designer"},
+              {"day": "Fri", "channel": "Blog", "title": "Employee Satisfaction Survey Template (Free Download)", "keyword": "employee satisfaction survey template", "type": "Template + download", "cta": "Download (gated)", "owner": "Content marketer + Designer"}
+            ]
+          }
+        },
+        "repurposing_map": {
+          "anchor": "HR Software Comparison Guide (blog post)",
+          "derivatives": [
+            "LinkedIn carousel: Top 5 takeaways (5 slides)",
+            "Email newsletter feature: Key comparison table",
+            "YouTube Short: 60-sec 'which HR tool is right for you?' decision tree",
+            "LinkedIn text post: Hot take on why most comparison posts are biased",
+            "Twitter/X thread: 7 things to look for when evaluating HR software",
+            "Gated PDF: Downloadable comparison checklist"
           ]
+        },
+        "mql_tracking": {
+          "sources": [
+            "Gated template downloads (onboarding checklist, survey template, comparison checklist) — target: 15 MQLs",
+            "Blog → demo CTA clicks — target: 8 MQLs",
+            "LinkedIn → website → demo — target: 5 MQLs",
+            "Email newsletter → demo booking — target: 2 MQLs"
+          ]
+        }
+      }
+    },
+    {
+      "input": "I'm a solo content creator running a personal finance blog. I also have an Instagram and a weekly newsletter. I can create about 5 hours of content per week. Help me plan a sustainable calendar.",
+      "output": {
+        "capacity_reality_check": "5 hours/week means: 1 blog post (3 hrs writing + editing), 3 Instagram posts (30 min each), and 1 newsletter (1 hr). That's your max. Don't try to do more — consistency beats volume.",
+        "strategy": {
+          "content_pillars": [
+            {"name": "Money Fundamentals", "description": "Budgeting, saving, debt payoff — evergreen SEO content", "frequency": "2x/month"},
+            {"name": "Investing Simplified", "description": "Index funds, retirement accounts, compound interest", "frequency": "2x/month"},
+            {"name": "Money Mindset", "description": "Behavioral finance, emotional spending, personal stories", "frequency": "Instagram-only"},
+            {"name": "Tool Reviews", "description": "App reviews, bank comparisons — affiliate revenue potential", "frequency": "1x/month"}
+          ]
+        },
+        "weekly_workflow": {
+          "sunday": "Batch content creation day (3 hours): Write blog post draft + create 3 Instagram graphics in Canva",
+          "monday": "Publish blog post (30 min editing + SEO optimization). Schedule Instagram post #1.",
+          "tuesday": "Nothing — rest day from content",
+          "wednesday": "Instagram post #2. Write newsletter (1 hour) summarizing blog + adding personal commentary.",
+          "thursday": "Send newsletter (morning). Engage with comments/DMs for 15 min.",
+          "friday": "Instagram post #3. Engage with comments for 15 min.",
+          "weekend": "No content work. Capture ideas in notes app for next week."
+        },
+        "sustainability_tips": [
+          "Never create more than 1 week ahead — burnout happens when you feel perpetually behind",
+          "Every blog post becomes: 1 newsletter summary + 3 Instagram posts (pull stats, quotes, tips). That's 5 pieces from 1 creation session.",
+          "Take 1 week off every 8 weeks. Schedule repurposed content that week — top-performing Instagram posts reshared, 'best of' newsletter.",
+          "Track what performs: if blog SEO posts drive 80% of your traffic, do more of those and fewer Instagram-only pieces"
+        ]
+      }
+    },
+    {
+      "input": "Plan a content calendar around a product launch. We're releasing a new feature for our project management app in 6 weeks. Need pre-launch, launch, and post-launch content across blog, social, and email.",
+      "output": {
+        "launch_content_phases": {
+          "pre_launch_weeks_1_3": {
+            "objective": "Build awareness and anticipation. Educate the audience on the PROBLEM the feature solves before revealing the solution.",
+            "blog": [
+              {"week": 1, "title": "Why [Problem] Is the #1 Complaint in Project Management (and What We're Doing About It)", "purpose": "Problem awareness, SEO for problem keyword"},
+              {"week": 2, "title": "How 5 Teams Solved [Problem] (Before Our New Feature)", "purpose": "Social proof + organic teaser"},
+              {"week": 3, "title": "Coming Soon: A Better Way to [Solve Problem]", "purpose": "Direct feature teaser with waitlist signup"}
+            ],
+            "social": [
+              "Week 1: Poll — 'What's your biggest frustration with project management?' (engagement + research)",
+              "Week 2: Behind-the-scenes — 'Sneak peek of what our engineering team has been building for 6 months' (teaser photo/video)",
+              "Week 3: Countdown posts — 'Something big is coming in [X] days' with daily hints"
+            ],
+            "email": [
+              "Week 2: Segment existing users who've requested this feature → personal email from product manager",
+              "Week 3: Waitlist announcement to full list — 'Be the first to try our newest feature'"
+            ]
+          },
+          "launch_week_4": {
+            "objective": "Maximum visibility. Every channel announces simultaneously.",
+            "day_by_day": [
+              {"day": "Mon", "action": "Blog: Feature announcement post with demo video. Email: Launch announcement to full list. Social: Launch post on all platforms."},
+              {"day": "Tue", "action": "Blog: Tutorial — 'How to Use [Feature]: Complete Guide'. Social: User testimonial from beta tester."},
+              {"day": "Wed", "action": "Social: Short demo video (60 sec). Email: 'Did you see our new feature?' to non-openers from Monday."},
+              {"day": "Thu", "action": "Blog: Customer case study — 'How [Beta Customer] Uses [Feature] to Save 5 Hours/Week'. Social: Quote graphic from case study."},
+              {"day": "Fri", "action": "Social: Recap of launch week + thank you post. Email: 'What people are saying about [Feature]' — social proof roundup."}
+            ]
+          },
+          "post_launch_weeks_5_6": {
+            "objective": "Drive adoption and collect user stories for ongoing marketing",
+            "content": [
+              "Blog: Advanced tips — 'Pro Tips for [Feature]: 7 Things You Didn't Know You Could Do'",
+              "Blog: Integration guide — 'Using [Feature] with Slack/Notion/Jira'",
+              "Social: User-generated content campaign — 'Show us how you use [Feature]' with a branded hashtag",
+              "Email: Feature adoption sequence to users who haven't tried it yet (3 emails over 2 weeks)",
+              "Social: Q&A Live/AMA about the feature — address questions and feedback publicly"
+            ]
+          }
         }
       }
     }

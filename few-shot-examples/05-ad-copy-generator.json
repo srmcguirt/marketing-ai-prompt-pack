@@ -1,69 +1,154 @@
 {
-  "prompt_name": "Ad Copy Generator",
+  "prompt_name": "Ad Copy Generator (Google & Meta)",
   "examples": [
     {
-      "id": 1,
-      "scenario": "Google Search RSA + Meta ad for SaaS lead gen",
-      "input": {
-        "product": "Rosterwise — AI scheduling software for healthcare staffing",
-        "campaign_goal": "Lead generation — book a demo",
-        "audience": "Hospital staffing coordinators and nursing managers",
-        "differentiator": "Reduces schedule conflicts by 78% in first month, integrates with Epic",
-        "offer": "Free 30-day pilot",
-        "primary_keyword": "healthcare staff scheduling software"
-      },
+      "input": "Create Google Search ads for an online accounting software targeting small business owners. Product is $29/month. Key selling points: easy invoicing, automatic bank reconciliation, tax-ready reports. We're competing with QuickBooks and FreshBooks.",
       "output": {
-        "google_rsa": {
+        "campaign_brief": {
+          "objective": "Leads (free trial signups)",
+          "target_audience": "Small business owners, freelancers, solopreneurs searching for accounting solutions",
+          "competitive_differentiators": "Simpler than QuickBooks, cheaper than FreshBooks, designed for non-accountants"
+        },
+        "ad_group_1": {
+          "theme": "Small Business Accounting Software",
+          "target_keywords": [
+            "[small business accounting software]",
+            "\"accounting software for small business\"",
+            "[easy accounting software]",
+            "\"simple bookkeeping software\"",
+            "[accounting app small business]"
+          ],
+          "negative_keywords": ["free", "enterprise", "ERP", "oracle", "SAP", "course", "degree", "job", "salary"],
           "headlines": [
-            {"text": "Healthcare Scheduling Software", "pin": "H1 — keyword match", "chars": 30},
-            {"text": "Reduce Schedule Conflicts 78%", "pin": "H2 — result", "chars": 29},
-            {"text": "Integrates With Epic & Cerner", "pin": "H2 alt — integration", "chars": 29},
-            {"text": "Free 30-Day Hospital Pilot", "pin": "H3 — offer", "chars": 26},
-            {"text": "Staff Scheduling AI — Free Trial", "pin": "H1 alt", "chars": 32},
-            {"text": "Trusted by 200+ Hospital Systems", "chars": 33},
-            {"text": "No More Double-Booked Nurses", "chars": 29},
-            {"text": "Automate Your On-Call Schedule", "chars": 30},
-            {"text": "Book a Demo in 15 Minutes", "chars": 25},
-            {"text": "Reduce Overtime Costs Now", "chars": 25},
-            {"text": "Staffing Gaps? AI Fills Them", "chars": 29},
-            {"text": "Healthcare-Specific Scheduling AI", "chars": 33}
+            "Small Business Accounting Made Easy",
+            "Invoicing & Bookkeeping in One App",
+            "Ditch the Spreadsheet — Try Free",
+            "Accounting Software — $29/Month",
+            "Send Invoices in Under 60 Seconds",
+            "Auto Bank Reconciliation Built In",
+            "Tax-Ready Reports, Zero Headaches",
+            "No Accounting Degree Required",
+            "2,000+ Small Businesses Trust Us",
+            "Free 14-Day Trial — No Card Needed",
+            "Simpler Than QuickBooks®",
+            "Switch from Spreadsheets in 10 Min",
+            "Invoicing + Expenses + Tax Reports",
+            "Your Books, Always Up to Date",
+            "Built for Owners, Not Accountants"
           ],
           "descriptions": [
-            "Stop fixing schedule conflicts manually. Rosterwise AI reduces conflicts 78% in 30 days. Epic/Cerner integration. Free pilot.",
-            "Healthcare staffing coordinators save 12 hrs/week with Rosterwise. Book a 15-min demo — see your live schedule in the tool.",
-            "200+ hospital systems trust Rosterwise for nurse scheduling. Handles PTO, certifications, and overtime rules automatically.",
-            "Free 30-day pilot for qualified hospitals. Setup takes 48 hours. See ROI before you pay a cent."
+            "Stop wrestling with spreadsheets. Send invoices, track expenses, and generate tax reports in one simple app. Start your free trial today.",
+            "Automatic bank feeds, one-click reconciliation, and tax-ready reports. Everything a small business needs — nothing it doesn't. Try free for 14 days.",
+            "Join 2,000+ small business owners who switched to simpler accounting. Easy setup, no training needed. $29/mo after free trial. Cancel anytime.",
+            "Professional invoices in 60 seconds. Automatic expense categorization. Quarterly tax estimates. All for $29/month. See why owners are switching."
           ],
-          "sitelinks": [
-            {"title": "See Customer Stories", "line1": "How Memorial Health cut overtime", "line2": "by 31% in 60 days"},
-            {"title": "Epic Integration Guide", "line1": "Native Epic/Cerner sync", "line2": "Setup in under 2 hours"},
-            {"title": "Pricing for Hospitals", "line1": "Per-bed pricing that scales", "line2": "with your facility size"},
-            {"title": "Book a Live Demo", "line1": "15-minute walkthrough", "line2": "with a healthcare specialist"}
-          ],
-          "callouts": ["HIPAA Compliant", "Epic Integration", "24/7 Support", "Free Implementation", "No Long-Term Contract", "SOC 2 Certified", "Conflict Detection AI", "PTO Rule Engine"]
-        },
-        "meta_ads": {
-          "cold_audience_feed_ad": {
-            "primary_text": "Your scheduling coordinator is spending 12 hours a week on a spreadsheet.\n\nRosterwise AI handles it in 90 minutes.\n\nConflict detection. PTO rules. Certification tracking. On-call rotations.\n\nAll automated. Epic-connected. HIPAA compliant.\n\n200+ hospital systems made the switch. Free 30-day pilot for qualified facilities.",
-            "headline": "AI Scheduling for Hospitals",
-            "description": "Free pilot. Epic integration.",
-            "cta_button": "Learn More",
-            "visual_brief": "Side-by-side: left shows a staffing coordinator surrounded by paper schedules and stress; right shows a clean dashboard with auto-resolved conflicts highlighted in green. No stock photo faces — use dashboard screenshot with real UI."
-          },
-          "retargeting_ad": {
-            "primary_text": "You looked at Rosterwise. You haven't booked a demo yet.\n\nFair — it's a big decision. So here's what we offer instead of a sales call:\n\nA 15-minute screen share where we load your real schedule data (with fake names) and show you exactly what would have been different last week.\n\nNo commitment. No pitch deck. Just your data in the tool.\n\n[Book the 15-minute session →]",
-            "headline": "See Your Schedule in Rosterwise",
-            "cta_button": "Book 15-Min Session"
+          "pinning": "Pin 'Small Business Accounting Made Easy' to Position 1. Pin '$29/Month' or 'Free 14-Day Trial' to Position 2 for price/offer visibility.",
+          "extensions": {
+            "sitelinks": ["Pricing Plans", "See All Features", "Customer Stories", "Free Trial Signup"],
+            "callouts": ["No Credit Card Required", "Cancel Anytime", "24/7 Support", "Bank-Level Security"],
+            "structured_snippets": {"header": "Features", "values": ["Invoicing", "Expense Tracking", "Bank Reconciliation", "Tax Reports", "Mileage Tracking"]}
           }
         },
-        "ab_test_matrix": {
-          "variable": "Hook type",
-          "versions": [
-            {"version": "A", "hook_type": "Time-loss", "hook": "12 hours/week on scheduling. What else could your team do with that time?"},
-            {"version": "B", "hook_type": "Risk/conflict", "hook": "Every scheduling conflict is a compliance risk. Here's how hospitals are eliminating them."},
-            {"version": "C", "hook_type": "Social proof", "hook": "200 hospital systems automated their scheduling last year. Here's what changed."}
+        "ad_group_2": {
+          "theme": "QuickBooks Alternative",
+          "target_keywords": [
+            "\"QuickBooks alternative\"",
+            "[alternative to QuickBooks]",
+            "\"simpler than QuickBooks\"",
+            "[QuickBooks too complicated]"
           ],
-          "recommendation": "Test A vs B first — time-loss and risk are the two strongest motivators for this buyer. Run for 2 weeks or 100 leads, whichever comes first."
+          "headlines": [
+            "Frustrated With QuickBooks®?",
+            "The Simple QuickBooks® Alternative",
+            "Switch in 10 Minutes — Free Import",
+            "All the Features, Half the Price",
+            "Accounting Without the Complexity"
+          ],
+          "note": "Do NOT use 'QuickBooks' in ad copy — trademark policy violation. Use competitor keyword targeting with your own brand messaging."
+        }
+      }
+    },
+    {
+      "input": "Create Meta (Facebook/Instagram) ads for a direct-to-consumer premium dog food brand. Product: fresh, human-grade dog food delivered monthly. Price: $60-$120/month depending on dog size. Target: millennial dog owners who treat their dogs like family.",
+      "output": {
+        "campaign_brief": {
+          "objective": "Conversions (subscription signups via quiz funnel)",
+          "target_audience": "Dog owners 28-42, household income $75K+, interested in pet health, organic food, and premium pet products. They call their dog their 'child' unironically."
+        },
+        "ad_set_1": {
+          "audience": "Interest-based: Dog owners + organic food + pet health",
+          "variations": [
+            {
+              "hook_type": "Problem/Curiosity",
+              "primary_text": "The ingredient list on your dog's food should scare you.\n\nMost kibble contains: meat by-products (that means beaks, hooves, and feathers), artificial preservatives linked to cancer, and 'natural flavors' that are anything but natural.\n\nYour dog eats the same thing every single day. Shouldn't it be real food?\n\n🥩 Human-grade beef, chicken & turkey\n🥕 Fresh vegetables — no fillers\n📦 Delivered monthly, pre-portioned for your dog\n\nTake the 2-minute quiz to build your dog's custom meal plan.",
+              "headline": "Real Food for Real Dogs",
+              "description": "Fresh, human-grade meals delivered",
+              "cta_button": "Learn More"
+            },
+            {
+              "hook_type": "Social Proof / Transformation",
+              "primary_text": "\"My vet asked what I changed. Tucker's coat is shinier, he has more energy, and his digestive issues are completely gone.\"\n— Sarah M., Golden Retriever mom\n\nWe hear stories like this every day. Turns out, feeding your dog actual food (not processed pellets) makes a visible difference in 2-3 weeks.\n\n✅ Human-grade ingredients\n✅ Vet-formulated recipes\n✅ Custom portions for your dog's breed, age & weight\n\nStart with 50% off your first box.",
+              "headline": "See the Difference in 2 Weeks",
+              "description": "50% off your first box",
+              "cta_button": "Get Offer"
+            },
+            {
+              "hook_type": "Emotional / Identity",
+              "primary_text": "You wouldn't eat the same processed meal every day for your entire life.\n\nSo why does your dog?\n\n[Product] delivers fresh, vet-formulated meals made from ingredients you'd actually recognize: real chicken, sweet potatoes, spinach, and blueberries.\n\nBecause the best member of your family deserves better than mystery kibble.",
+              "headline": "They Deserve Better Than Kibble",
+              "description": "Custom meal plans starting at $2/day",
+              "cta_button": "Build My Dog's Plan"
+            }
+          ]
+        },
+        "creative_direction": {
+          "video_ad_1": "Before/after split screen — same dog, dull coat eating kibble vs. shiny coat eating fresh food. 15 seconds, text overlay, trending audio.",
+          "video_ad_2": "POV: You meal prep for your dog. Show fresh ingredients being prepared, portioned, and your dog devouring it. Aspirational, warm lighting.",
+          "static_ad": "Ingredient comparison: left side shows kibble ingredient list (long, unreadable), right side shows [Product] ingredient list (short, recognizable). Clean design."
+        },
+        "testing_plan": [
+          {"test": "Hook type", "variable": "Problem vs Social Proof vs Emotional", "hypothesis": "Problem hook will have highest CTR, Social Proof will have highest conversion rate", "budget": "$150/variation, run 7 days"},
+          {"test": "Offer framing", "variable": "'50% off first box' vs 'Starting at $2/day' vs 'Free trial box'", "hypothesis": "50% off will drive highest signup rate", "budget": "$100/variation, run 5 days"}
+        ]
+      }
+    },
+    {
+      "input": "Create Google and Meta ads for a B2B cybersecurity training platform. Target: IT managers and CISOs at mid-market companies. Product: annual subscription, $5,000/year. Goal: demo requests.",
+      "output": {
+        "google_search": {
+          "ad_group": "Security Awareness Training",
+          "keywords": ["security awareness training", "employee cybersecurity training", "phishing simulation platform", "compliance security training"],
+          "headlines": [
+            "Security Training That Employees",
+            "Actually Complete — 94% Rate",
+            "Reduce Phishing Risk by 75%",
+            "SOC 2 & HIPAA Compliant Training",
+            "Book a Demo — See Results in 30s",
+            "Phishing Simulations + Training",
+            "Security Training for Mid-Market",
+            "Your Employees Are Your Firewall",
+            "Automated Compliance Reporting",
+            "Replace Boring Annual Training",
+            "Real Attack Simulations, No Risk",
+            "Custom Training by Department",
+            "Track Risk Score by Employee",
+            "Beyond Click Rates — Behavior Change",
+            "Request a Free Security Assessment"
+          ],
+          "descriptions": [
+            "94% completion rates because employees actually enjoy our training. Phishing simulations, interactive modules, and automated compliance reporting. Book a 15-min demo.",
+            "Your employees click 1 in 5 phishing emails. Our platform reduces that to 1 in 50. Real attack simulations, personalized training paths, and CISO-ready dashboards.",
+            "SOC 2, HIPAA, PCI-DSS compliance training with automated reporting. Stop scrambling before audits. Continuous training that maps to every major framework.",
+            "Mid-market companies can't afford a breach. We make enterprise-grade security training accessible. Custom programs, real phishing sims, measurable behavior change."
+          ]
+        },
+        "meta_linkedin": {
+          "note": "For B2B cybersecurity at $5K/year, LinkedIn Ads will significantly outperform Meta for this audience. Recommend shifting 70% of social budget to LinkedIn.",
+          "linkedin_ad": {
+            "primary_text": "Your employees are your biggest security vulnerability — and your best defense.\n\n85% of data breaches involve human error. But most security training is a once-a-year checkbox that employees click through in 20 minutes.\n\nThat's not training. That's compliance theater.\n\n[Product] delivers continuous, adaptive security training that actually changes behavior:\n→ Real phishing simulations (not obvious test emails)\n→ 5-minute micro-lessons triggered by risky behavior\n→ Department-specific threat scenarios\n→ CISO dashboard with risk scores by team\n\nResult: 75% reduction in phishing click rates within 90 days.\n\nBook a 15-minute demo and see your organization's simulated risk score.",
+            "headline": "Security Training That Changes Behavior",
+            "cta": "Request Demo"
+          }
         }
       }
     }

@@ -219,7 +219,7 @@ WireForge builds production-grade AI tools for professionals — prompt packs, M
 
 - 🌐 [wireforge.dev](https://wireforge.dev)
 - 🐙 [github.com/srmcguirt](https://github.com/srmcguirt)
-- 🐦 [@mcpforge](https://x.com/wireforge)
+- 🐦 [@wireforge](https://x.com/wireforge)
 
 **Other products:**
 - [DevOps AI Prompt Pack](https://srmcguirt.gumroad.com) — 8 prompts for DevOps and infrastructure engineers

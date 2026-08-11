@@ -2,83 +2,154 @@
   "prompt_name": "Brand Voice Architect",
   "examples": [
     {
-      "id": 1,
-      "scenario": "Brand voice development for B2B fintech startup",
-      "input": {
-        "company": "Ledgr — automated financial reporting for CFOs",
-        "stage": "Series A, 45 employees",
-        "audience": "CFOs and finance directors at mid-market companies ($10M-$200M revenue)",
-        "values": ["Radical transparency", "Speed without recklessness", "Partnership not vendor"],
-        "competitor_voice_to_avoid": "Bland enterprise SaaS speak (Sage, Quickbooks) — corporate, safe, boring"
-      },
+      "input": "Define a brand voice for a fintech startup that offers a savings app for Gen Z (18-26). The app rounds up purchases and auto-invests the spare change. Competitors (Acorns, Qapital) sound either too corporate or too patronizing. We want to be different.",
       "output": {
-        "voice_dna": [
+        "brand_essence": "Financial confidence without the finance bro energy. We make investing feel as natural as splitting a dinner tab.",
+        "target_audience_language": "This audience speaks in memes, voice notes, and screenshots. They're financially anxious but aspirational. They distrust traditional banks and 'adulting' content. They want financial guidance that doesn't talk down to them or use Wall Street jargon.",
+        "competitive_landscape": "Acorns sounds like a bank trying to be cool (corporate with a millennial veneer). Qapital sounds like a Silicon Valley pitch deck. Robinhood sounds like a frat bro. The gap: nobody sounds like a genuinely helpful friend who happens to know about money.",
+        "voice_attributes": [
           {
-            "dimension": "Expert Without Being Elitist",
-            "one_sentence": "We know more about financial reporting than most, and we share that knowledge freely — without talking down.",
-            "we_do": [
-              "Use finance terminology correctly and confidently",
-              "Explain complex concepts plainly when needed",
-              "Cite real numbers and research",
-              "Acknowledge when something is genuinely hard"
+            "name": "Real, not performative",
+            "definition": "We sound like a financially savvy friend texting advice — not a brand trying to sound relatable",
+            "spectrum": "Authentic and casual, not sloppy or try-hard",
+            "do": [
+              "\"Your round-ups just hit $500. That's rent money you didn't know you had.\"",
+              "\"Investing is scary. So was driving. You learned that too.\"",
+              "\"We won't pretend budgets are fun. But watching your money grow? That part slaps.\""
             ],
-            "we_dont": [
-              "Use jargon to sound impressive",
-              "Oversimplify to the point of being condescending",
-              "Pretend everything is easy"
-            ],
-            "on_brand_example": "Month-end close takes most finance teams 5-8 business days. It doesn't have to. Here's why it takes that long — and what changes when you remove the manual steps.",
-            "off_brand_example": "Leverage our cutting-edge, AI-powered financial automation solution to synergistically optimize your close process and drive stakeholder value."
+            "dont": [
+              "\"We're so excited to announce our new feature! 🎉🎉🎉\" (corporate enthusiasm)",
+              "\"Yooo fam, let's get this bread 💰\" (trying too hard)",
+              "\"As a leading fintech innovator...\" (nobody talks like this)"
+            ]
           },
           {
-            "dimension": "Direct Without Being Blunt",
-            "one_sentence": "We say what we mean. We don't soften everything into corporate mush, but we're not unnecessarily harsh.",
-            "we_do": [
-              "Lead with the conclusion, then explain",
-              "Use active voice",
-              "Say 'you' and 'we' — not 'clients' and 'the platform'"
+            "name": "Clear, not dumbed down",
+            "definition": "We explain financial concepts simply because clarity is smart, not because our audience is dumb",
+            "spectrum": "Simple and precise, not condescending or oversimplified",
+            "do": [
+              "\"Compound interest: your money makes money, and then THAT money makes money. It's inception for your savings.\"",
+              "\"An index fund is like buying a tiny slice of every major company at once. Less risk, less drama.\"",
+              "\"Your portfolio is diversified — which means if one investment dips, the others help cover it.\""
             ],
-            "we_dont": [
-              "Use passive voice to avoid ownership",
-              "Hedge every statement with 'may' and 'might'",
-              "Start sentences with 'In order to'"
+            "dont": [
+              "\"Don't worry about the details, we handle everything! 😊\" (patronizing)",
+              "\"Our algorithm leverages quantitative analysis to optimize asset allocation\" (jargon wall)",
+              "\"Investing is sooo easy, anyone can do it!\" (dismissing valid anxiety)"
+            ]
+          },
+          {
+            "name": "Encouraging, not preachy",
+            "definition": "We celebrate small wins without lecturing about financial responsibility",
+            "spectrum": "Supportive and motivating, not guilt-tripping or moralizing",
+            "do": [
+              "\"$12.43 invested this week. Not life-changing today. But future-you is grateful.\"",
+              "\"You didn't invest last month. That's fine. You're here now.\"",
+              "\"Every time you order coffee, we invest your spare change. Your latte habit is secretly building wealth.\""
             ],
-            "on_brand_example": "Your close process is slow because you're reconciling in spreadsheets. We fix that.",
-            "off_brand_example": "In order to potentially address the challenges that may be associated with the month-end close process, our solution offers a range of capabilities that could be beneficial."
+            "dont": [
+              "\"If you'd invested $5/day for the last 10 years, you'd have...\" (guilt math)",
+              "\"Stop wasting money on things you don't need\" (judgy)",
+              "\"You NEED to start investing NOW or you'll fall behind!\" (anxiety-inducing)"
+            ]
           }
         ],
-        "voice_spectrum": {
-          "formal_to_conversational": {"score": 6, "description": "Professional but human — like a smart colleague, not a legal document"},
-          "reserved_to_expressive": {"score": 4, "description": "Measured. We let the data do the emoting."},
-          "serious_to_playful": {"score": 3, "description": "Finance is serious. We can be wry but never glib."},
-          "abstract_to_concrete": {"score": 9, "description": "Always specific. Always numbers. Always examples."},
-          "we_to_you": {"score": 8, "description": "Reader-first. Their problem, their outcome, their time."}
+        "tone_matrix": {
+          "push_notification": {"energy": "Medium", "formality": "Very Low", "humor": "High", "example": "Your round-ups just passed $1,000 🎯 That's a flight somewhere warm."},
+          "error_message": {"energy": "Low", "formality": "Low", "humor": "Light", "example": "Something went sideways. Your money is safe — we just need a sec to fix this."},
+          "onboarding": {"energy": "High", "formality": "Low", "humor": "Medium", "example": "Welcome. In about 2 minutes, you'll have an investment portfolio. Wild, right?"},
+          "security_alert": {"energy": "Low", "formality": "Medium", "humor": "None", "example": "We noticed a login from a new device. If this was you, you're all good. If not, tap here to secure your account."}
         },
-        "banned_words": [
-          {"word": "Leverage (as verb)", "why": "Overused, meaningless", "use_instead": "use"},
-          {"word": "Synergy", "why": "Corporate nonsense", "use_instead": "working together"},
-          {"word": "Solution", "why": "Vague — everything is a 'solution'", "use_instead": "software / tool / [specific thing]"},
-          {"word": "Excited to announce", "why": "Every company is 'excited'", "use_instead": "We built [thing]. Here's why."},
-          {"word": "Journey", "why": "Overused in marketing", "use_instead": "process / path / work"},
-          {"word": "Empower", "why": "Means nothing specific", "use_instead": "give you / let you / enable"},
-          {"word": "Best-in-class", "why": "Self-serving claim without evidence", "use_instead": "[specific proof]"},
-          {"word": "Seamlessly", "why": "Everything claims to be seamless", "use_instead": "in X minutes / without [frustration]"}
+        "vocabulary_guide": {
+          "use": ["invest", "grow", "spare change", "round-ups", "portfolio", "your money"],
+          "avoid": ["wealth management", "assets under management", "risk-adjusted returns", "fiduciary", "synergy"],
+          "banned": ["hustle", "grind", "adulting", "YOLO", "moonshot"]
+        }
+      }
+    },
+    {
+      "input": "Our enterprise B2B cybersecurity company sounds exactly like every other cybersecurity company: fear-based, jargon-heavy, corporate. We want to stand out. We sell to CISOs at Fortune 500 companies. Help us find a differentiated voice.",
+      "output": {
+        "brand_essence": "Cybersecurity for people who've seen everything and need a partner, not a fear merchant. Calm expertise that earns trust through competence, not alarm bells.",
+        "competitive_landscape": "The cybersecurity industry has three voice modes: (1) Fear-mongering ('YOUR DATA IS AT RISK'), (2) Military cosplay ('defend your perimeter, deploy countermeasures'), and (3) Corporate cardboard ('leading next-generation cloud-native solution'). All three are indistinguishable. CISOs are exhausted by threat-of-the-week marketing.",
+        "voice_attributes": [
+          {
+            "name": "Calm authority",
+            "definition": "We've seen the worst breaches and the most sophisticated attacks. Our confidence comes from competence, not volume.",
+            "spectrum": "Confident and measured, not arrogant or alarmist",
+            "do": [
+              "\"Most breaches aren't sophisticated. They're preventable. Here's how.\"",
+              "\"We monitor 4.2 billion events per day. We escalate about 12. That's not a bug — that's signal-to-noise engineering.\"",
+              "\"Your board wants to know if you're secure. You want to answer with data, not assurances. We give you both.\""
+            ],
+            "dont": [
+              "\"HACKERS ARE TARGETING YOUR COMPANY RIGHT NOW!\" (fear-mongering)",
+              "\"Our AI-powered next-gen platform leverages...\" (buzzword soup)",
+              "\"We provide best-in-class solutions...\" (says nothing)"
+            ]
+          },
+          {
+            "name": "Peer-to-peer, not vendor-to-buyer",
+            "definition": "We talk to CISOs like fellow security professionals, not prospects to be converted",
+            "spectrum": "Knowledgeable and direct, not salesy or condescending",
+            "do": [
+              "\"You already know your attack surface is bigger than your team can cover. Let's talk about prioritization.\"",
+              "\"We built this because our founders got tired of the tools they were using at [Previous Company].\"",
+              "\"If you're evaluating us against [Competitor], here's where we're genuinely stronger and where they might be a better fit.\""
+            ],
+            "dont": [
+              "\"Schedule a demo to learn how we can help!\" (generic CTA)",
+              "\"Our award-winning platform...\" (nobody cares about your awards)",
+              "\"In today's threat landscape...\" (every cybersecurity blog opens this way)"
+            ]
+          }
         ],
-        "quick_reference_card": {
-          "we_are": ["Direct", "Data-driven", "Partnership-oriented"],
-          "we_are_not": ["Corporate", "Salesy", "Vague"],
-          "top_5_rules": [
-            "Lead with the answer, then explain",
-            "Use specific numbers, not ranges or approximations",
-            "Write 'you close faster' not 'the close process becomes more efficient'",
-            "Never use passive voice when active voice is possible",
-            "If you can cut a word without losing meaning, cut it"
-          ],
-          "on_brand_examples": [
-            "Month-end close in 2 days. Not a promise — a result 340 CFOs have measured.",
-            "We don't do enterprise contracts. Month-to-month, full access, cancel any time.",
-            "Your auditors will see the same data you see, in real time. No more prep work before audits."
-          ]
+        "ai_prompt_guide": {
+          "system_prompt": "You write marketing content for [Company], an enterprise cybersecurity company. Your voice is calm authority — like a senior security professional briefing a peer, not a salesperson pitching a prospect. Never use fear-based language, military metaphors, or generic cybersecurity buzzwords. Be specific with data. Assume the reader (CISO, Fortune 500) is deeply knowledgeable and skeptical of vendor marketing. Differentiate through candor and competence, not alarm."
+        }
+      }
+    },
+    {
+      "input": "Create brand voice guidelines for a sustainable fashion brand. We sell basics (t-shirts, jeans, sweaters) made from recycled materials. Target: environmentally conscious millennials who are tired of greenwashing.",
+      "output": {
+        "brand_essence": "Sustainability without the sanctimony. Beautiful basics that happen to be made right.",
+        "voice_attributes": [
+          {
+            "name": "Transparent, not preachy",
+            "definition": "We share our supply chain openly — the good and the not-yet-good — because we believe transparency builds more trust than perfection claims",
+            "spectrum": "Honest and informative, not self-righteous or guilt-tripping",
+            "do": [
+              "\"This t-shirt is made from 8 recycled water bottles. It also traveled 4,200 miles to get to you. We're working on that part.\"",
+              "\"We're not perfect. Our packaging is 80% recycled. The other 20% is the problem we're solving next quarter.\"",
+              "\"Here's exactly what your $45 pays for: $12 materials, $15 fair-wage labor, $8 shipping, $10 to keep the lights on.\""
+            ],
+            "dont": [
+              "\"Save the planet one t-shirt at a time! 🌍\" (oversimplified savior complex)",
+              "\"Fast fashion is DESTROYING the environment\" (guilt-based marketing)",
+              "\"We're the most sustainable brand on the planet\" (unverifiable claim)"
+            ]
+          },
+          {
+            "name": "Beautiful first, sustainable second",
+            "definition": "We lead with how great the clothes look and feel. Sustainability is a reason to feel even better about the purchase — not the only reason to buy.",
+            "spectrum": "Aspirational and stylish, not granola or activist",
+            "do": [
+              "\"The perfect white t-shirt. Softer than cotton. Made from recycled ocean plastic. Looks good, feels better.\"",
+              "\"These jeans fit like your favorites from 10 years ago. They're also made from 40% recycled denim.\"",
+              "\"Basics that look expensive. Because quality is sustainable too.\""
+            ],
+            "dont": [
+              "\"Eco-friendly t-shirt made from organic hemp!\" (leading with material, not appeal)",
+              "\"For the conscious consumer\" (labeling your customer is presumptuous)",
+              "\"Join the sustainable fashion revolution!\" (too activist, too generic)"
+            ]
+          }
+        ],
+        "tone_modulation": {
+          "product_page": "Lead with feel, fit, and look. Sustainability details in a collapsible 'Made Right' section below.",
+          "instagram": "Lifestyle-forward. Show the clothes on real people in real settings. Sustainability captions 30% of the time, not every post.",
+          "impact_report": "Data-heavy, honest, specific. Include what went wrong alongside what went right.",
+          "customer_service": "Warm, solution-focused, zero shame. If someone wants to return something, make it easy — don't lecture about waste."
         }
       }
     }

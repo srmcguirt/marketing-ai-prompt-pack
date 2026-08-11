@@ -2,123 +2,154 @@
   "prompt_name": "Email Sequence Writer",
   "examples": [
     {
-      "id": 1,
-      "scenario": "SaaS free trial welcome sequence — 5 emails",
-      "input": {
-        "product": "Notion-style workspace for product teams",
-        "trigger": "User just started free trial",
-        "goal": "Convert trial users to paid ($29/mo) within 14 days",
-        "audience": "Product managers at tech startups, 25-40",
-        "tone": "Warm, smart, gets to the point"
-      },
+      "input": "Write a 5-email welcome sequence for a B2B SaaS product (CRM for small businesses). Trigger: new free trial signup. Goal: activate the user and convert to paid plan ($49/month). The trial is 14 days.",
       "output": {
-        "sequence_map": "Day 0 → Day 1 → Day 3 → Day 7 → Day 12",
+        "sequence_overview": {
+          "type": "Welcome / Activation / Trial Conversion",
+          "trigger": "Free trial signup completion",
+          "goal": "Activate user (import contacts, send first email) within 3 days, convert to paid within 14 days",
+          "expected_metrics": {
+            "open_rate": "55-65% (welcome emails over-index)",
+            "click_rate": "12-18%",
+            "trial_to_paid": "8-12%"
+          }
+        },
         "emails": [
           {
-            "email_number": 1,
+            "name": "Email 1: The Warm Welcome",
             "day": 0,
-            "theme": "The fast start — get them to first value in 5 min",
-            "subject_lines": [
-              "A: Your workspace is ready (5-min quick start inside)",
-              "B: The one thing to do in your first 5 minutes",
-              "C: Don't skip this — it determines whether this sticks"
-            ],
-            "preview_text": "Most people skip this and regret it later.",
-            "body": "Your trial just started. Here's the one thing that separates people who love this 30 days later from people who don't:\n\nCreate your first real project — not a test project, not 'sandbox' — something you're actually working on.\n\n[→ Start your first real project](link)\n\nTakes 4 minutes. And everything clicks once you have real data in it.\n\nI'll be here if you have questions.\n\n— [Name]\nFounder, [Product]\n\nP.S. Reply to this email. Seriously — I read every one.",
-            "cta": "Start your first real project →",
-            "notes": "Plain text only. Founder signature builds trust. Encourage replies — this is also research."
+            "delay": "Immediately after signup",
+            "subject": "Your CRM is ready — let's get set up",
+            "alt_subject": "Welcome! Here's your quickest path to value",
+            "preview_text": "3 steps to import your contacts (takes 2 minutes)",
+            "body": "Hi {{first_name}},\n\nWelcome to [Product]! You just made life a lot easier for yourself.\n\nHere's what I'd do first if I were starting a 14-day trial (and I wanted to see results fast):\n\n**Step 1: Import your contacts** (2 min)\nDrag and drop a CSV, or connect Gmail/Outlook and we'll pull them in automatically.\n→ [Import contacts now]\n\n**Step 2: Send your first follow-up** (1 min)\nPick a contact you've been meaning to follow up with. Use one of our templates or write your own.\n\n**Step 3: See the magic** ✨\nWatch [Product] automatically log the conversation, set a reminder, and suggest your next step.\n\nThat's it. Three steps, five minutes, and you'll see why 2,000+ small businesses use [Product] every day.\n\n[Import my contacts →]\n\nQuestions? Just reply to this email — I'm a real person and I read every reply.\n\nCheers,\n[Name], Head of Customer Success",
+            "cta": "Import my contacts → /app/import",
+            "dynamic_elements": ["{{first_name}}", "Conditional: show Gmail import if email is @gmail.com, Outlook if @outlook.com"]
           },
           {
-            "email_number": 2,
+            "name": "Email 2: The Quick Win",
             "day": 1,
-            "theme": "The aha moment — show them the thing that changes how they work",
-            "subject_lines": [
-              "A: The feature product teams use 100x more than they expected",
-              "B: This is why our users stopped using Jira",
-              "C: Have you tried [Feature] yet?"
-            ],
-            "preview_text": "It takes 90 seconds to set up. Most people don't find it on their own.",
-            "body": "Most teams who try [Product] discover the [connected docs + tasks] feature by accident.\n\nThen they reorganize their entire workflow around it.\n\nHere's what it does:\nYou write a spec → tasks automatically link to it → when a developer comments on the task, it shows up in the spec.\n\nOne source of truth. No more Slack threads asking 'wait, which version is final?'\n\nSet it up for one project right now:\n[→ Connect my first doc to tasks](link)\n\nIt's the thing that makes the rest of it click.\n\n— [Name]\n\nP.S. Tomorrow I'll show you how [Company Name] used this to cut their weekly sync from 90 minutes to 20.",
-            "cta": "Connect my first doc to tasks →"
+            "delay": "24 hours after signup (skip if user already imported contacts)",
+            "subject": "Most teams see this in the first week",
+            "alt_subject": "The follow-up that closes deals",
+            "preview_text": "How [Customer] booked 3 meetings from one follow-up sequence",
+            "body": "Hi {{first_name}},\n\nDay 2 of your trial. Here's what typically happens this week:\n\n**Teams that import contacts on Day 1** close their first deal 40% faster during the trial.\n\nHere's why: [Product] spots the leads you haven't followed up with. It shows you who opened your emails, who visited your site, and who's ready to hear from you.\n\n🎯 **[Customer Name], a 3-person consulting firm**, imported their contacts on Monday. By Friday, they'd booked 3 new meetings from follow-ups [Product] suggested — leads they'd completely forgotten about.\n\n{{#if contacts_imported}}\nYou've already imported contacts — great! Try sending your first follow-up sequence.\n[Create a follow-up sequence →]\n{{else}}\nYou haven't imported contacts yet. It takes 2 minutes:\n[Import contacts now →]\n{{/if}}\n\nCheers,\n[Name]",
+            "cta": "Conditional based on activation status"
           },
           {
-            "email_number": 3,
-            "day": 3,
-            "theme": "Social proof + objection removal — they're starting to wonder if it's worth paying",
-            "subject_lines": [
-              "A: How [Real Company] cut meeting time by 60% (specific story)",
-              "B: 'I was skeptical after Notion burned us' — what changed",
-              "C: The PM who almost cancelled her trial"
-            ],
-            "preview_text": "She almost quit after day 2. Here's why she's still here at month 7.",
-            "body": "Sarah was three days into her trial and ready to quit.\n\n'It felt like Notion with extra steps,' she told me later.\n\nThen her team had their first sprint planning in [Product].\n\nNot a demo sprint. A real one, with real tickets, a real deadline, and four engineers who had no patience for broken tools.\n\nSix months later, she's a paying customer, she's expanded from her team of 5 to her company of 80, and she wrote us a case study.\n\nThe specific thing that changed her mind? [Read the full story →](link)\n\n(It's a 3-minute read. And if her situation sounds like yours, it'll probably change yours too.)\n\n— [Name]",
-            "cta": "Read Sarah's story →"
+            "name": "Email 3: The Feature Spotlight",
+            "day": 4,
+            "subject": "This feature saves our users 5 hrs/week",
+            "alt_subject": "Stop copying data between apps",
+            "preview_text": "Automatic email logging — no more manual CRM updates",
+            "body": "Hi {{first_name}},\n\nQuick question: how much time do you spend updating your CRM after every call and email?\n\nFor most small business owners, it's 5-7 hours per week. Some just... stop updating it entirely.\n\n[Product] fixes this. Every email, every call, every meeting — automatically logged to the right contact. No copying. No typing. No forgetting.\n\n[See how automatic logging works (45-sec video) →]\n\nYou're on day 4 of your trial. This is usually the feature that makes people say \"okay, I need this.\"\n\nCheers,\n[Name]",
+            "cta": "Watch 45-second demo video"
           },
           {
-            "email_number": 4,
-            "day": 7,
-            "theme": "Value deepening — show them something they haven't discovered yet",
-            "subject_lines": [
-              "A: The [Product] feature most teams find in month 3 (you can have it now)",
-              "B: 7 days in — have you tried this?",
-              "C: What your trial data tells us about your workflow"
-            ],
-            "preview_text": "The power users all use this. Most people find it by accident.",
-            "body": "One week in. Here's something the teams who get the most value always have in common:\n\nThey set up [Automation Feature].\n\nSpecifically: when a task moves to 'Done,' it automatically pings the relevant doc and logs a changelog entry.\n\nZero manual updates. Zero 'did you ship that?' Slack messages.\n\nHere's how to set it up in 3 steps:\n1. Go to Settings → Automations\n2. Choose 'Task Status Change' trigger\n3. Connect to your project doc\n\n[→ Set up my first automation](link)\n\nIf this saves you 30 minutes a week, that's 26 hours this year.\n\n— [Name]\n\nP.S. Your trial ends in 7 days. Here's what's included in the paid plan: [link to pricing]",
-            "cta": "Set up my first automation →",
-            "notes": "Soft pricing mention here — not pushy, but plant the seed."
+            "name": "Email 4: The Social Proof",
+            "day": 8,
+            "subject": "Why {{similar_company}} switched to us",
+            "alt_subject": "\"We tried 4 CRMs before this one\"",
+            "preview_text": "Real story from a team your size",
+            "body": "Hi {{first_name}},\n\nI wanted to share a story from a team a lot like yours.\n\n{{similar_company_testimonial}}\n\n\"We tried HubSpot (too complex), Pipedrive (too salesy), and spreadsheets (too messy). [Product] was the first CRM our whole team actually used. Setup took an afternoon, not a quarter.\"\n— {{testimonial_author}}, {{role}}\n\nYou have {{days_remaining}} days left in your trial. If you've been on the fence, this might help:\n\n✅ No long-term contracts — cancel anytime\n✅ We migrate your data for free if you're switching from another CRM\n✅ Support response time: under 2 hours, every time\n\n[Upgrade to Pro — $49/month →]\n\nCheers,\n[Name]",
+            "cta": "Upgrade to Pro"
           },
           {
-            "email_number": 5,
+            "name": "Email 5: The Last Chance",
             "day": 12,
-            "theme": "The close — trial ends in 2 days",
-            "subject_lines": [
-              "A: Your trial ends in 48 hours",
-              "B: Before you go — one question",
-              "C: 2 days left (and a question for you)"
-            ],
-            "preview_text": "If it's not clicking, I want to know why.",
-            "body": "Your trial ends in 2 days.\n\nIf [Product] has become part of how your team works — upgrading takes 90 seconds:\n[→ Upgrade now — $29/month](link)\n\nIf it hasn't clicked yet, I'd genuinely like to know why.\n\nHit reply and tell me: what was supposed to work that didn't?\n\nI ask because we've built every major feature based on exactly this kind of feedback. And if something's broken or missing for your use case, I want to know.\n\n— [Name]\n\nP.S. If you upgrade today, you get access to [Bonus Feature] that's launching next week. Early access for everyone who upgrades before Friday.",
-            "cta": "Upgrade now →",
-            "segmentation": "Non-openers after email 4: send re-engagement variant with subject 'Did this end up in the wrong inbox?'"
+            "subject": "Your trial ends in 2 days",
+            "alt_subject": "Don't lose your setup",
+            "preview_text": "Everything you've built is saved — here's how to keep it",
+            "body": "Hi {{first_name}},\n\nYour free trial ends in 2 days.\n\nHere's what you've built so far:\n• {{contacts_count}} contacts imported\n• {{emails_sent}} follow-ups sent\n• {{activities_logged}} activities automatically logged\n\nIf you upgrade, everything stays exactly as it is. If your trial expires, your data is safe for 30 days — but you'll lose access to the dashboard, automations, and email tracking.\n\n**Upgrade now and lock in $49/month** (our price increases to $59 for new signups next quarter).\n\n[Keep my account active →]\n\nNot ready? No hard feelings. Reply and tell me what's holding you back — I'd genuinely like to know.\n\nCheers,\n[Name]",
+            "cta": "Keep my account active → /billing/upgrade",
+            "dynamic_elements": ["{{contacts_count}}", "{{emails_sent}}", "{{activities_logged}}", "{{days_remaining}}"]
+          }
+        ],
+        "automation_rules": {
+          "exit_conditions": ["User upgrades to paid plan", "User explicitly cancels trial"],
+          "branch_logic": "If user has NOT imported contacts by Day 3, send an additional nudge email before Email 3. If user is highly active (logged in 5+ times), skip Email 2 and send Email 3 early.",
+          "suppression": "Do not send to users who have opened a support ticket in the last 24 hours (they may be frustrated — let support resolve first)"
+        }
+      }
+    },
+    {
+      "input": "Write a 3-email cart abandonment sequence for an e-commerce store selling premium headphones ($150-$400). Average cart value is $280.",
+      "output": {
+        "sequence_overview": {
+          "type": "Cart Abandonment",
+          "trigger": "Cart abandoned for 1 hour with items still in cart",
+          "goal": "Recover 8-12% of abandoned carts",
+          "notes": "At $280 average cart value, recovering even 30 carts/month = $8,400 in recovered revenue"
+        },
+        "emails": [
+          {
+            "name": "Email 1: The Gentle Reminder",
+            "delay": "1 hour after abandonment",
+            "subject": "Still thinking about the {{product_name}}?",
+            "preview_text": "Your cart is saved — finish your order anytime",
+            "body": "Hi {{first_name}},\n\nLooks like you left something behind:\n\n[PRODUCT IMAGE]\n**{{product_name}}** — {{product_price}}\n{{product_short_description}}\n\n⭐ {{product_rating}}/5 from {{review_count}} reviews\n\nYour cart is saved and ready when you are.\n\n[Complete my order →]\n\n**Free shipping** on orders over $199\n**30-day returns** — no questions asked\n\nNeed help deciding? Our audio experts are here: [Chat with us]",
+            "cta": "Complete my order → /cart",
+            "notes": "No discount in email 1 — many customers just got distracted. Don't train them to expect discounts."
+          },
+          {
+            "name": "Email 2: The Social Proof",
+            "delay": "24 hours after abandonment",
+            "subject": "Here's what {{product_name}} owners say",
+            "preview_text": "\"Best headphones I've ever owned\" — verified buyer",
+            "body": "Hi {{first_name}},\n\nStill considering the {{product_name}}? Here's what other customers said after they pulled the trigger:\n\n💬 \"The noise cancellation changed my work-from-home setup completely. Worth every penny.\" — Sarah M., verified buyer\n\n💬 \"I compared these to Sony and Bose before buying. No contest — the soundstage is incredible.\" — James K., verified buyer\n\n💬 \"Bought them for flights. Now I wear them everywhere.\" — Alex R., verified buyer\n\n[Product IMAGE + rating stars]\n**{{product_name}}** — {{product_price}}\n\n[Complete my order →]\n\n🔒 Secure checkout | 📦 Free shipping | 🔄 30-day returns",
+            "cta": "Complete my order → /cart"
+          },
+          {
+            "name": "Email 3: The Incentive",
+            "delay": "72 hours after abandonment",
+            "subject": "10% off your {{product_name}} — today only",
+            "preview_text": "Your exclusive offer expires at midnight",
+            "body": "Hi {{first_name}},\n\nLast nudge — promise.\n\nYour **{{product_name}}** is still in your cart, and I'd hate for you to miss out. Here's a little incentive:\n\n**Use code COMEBACK10 for 10% off your order.**\n\n[PRODUCT IMAGE]\n~~{{product_price}}~~ → **{{discounted_price}}**\nYou save: **{{savings_amount}}**\n\n⏰ This code expires at midnight tonight.\n\n[Claim my 10% off →]\n\nIf you've decided these aren't right for you, no worries at all. But if you've been going back and forth — this is your sign.\n\nCheers,\nThe [Brand] Team",
+            "cta": "Claim my 10% off → /cart?coupon=COMEBACK10",
+            "notes": "Only offer discount in email 3 (72 hours later). If they buy from email 1 or 2, you've saved 10% margin. Set the coupon to expire in 24 hours for real urgency."
           }
         ]
       }
     },
     {
-      "id": 2,
-      "scenario": "E-commerce abandoned cart — 3 emails",
-      "input": {
-        "product": "Premium leather wallet ($89)",
-        "trigger": "Added to cart, no purchase after 1 hour",
-        "goal": "Recover the sale",
-        "tone": "Friendly, not pushy"
-      },
+      "input": "Create a re-engagement sequence for subscribers who haven't opened an email in 90 days. Our list has 15,000 inactive subscribers. We're a fitness app with a $12/month subscription.",
       "output": {
+        "sequence_overview": {
+          "type": "Re-engagement / Win-Back",
+          "trigger": "No email opens in 90 days",
+          "goal": "Re-engage 15-20% of dormant subscribers. Remove the rest to improve deliverability.",
+          "segment_size": "15,000 inactive subscribers",
+          "deliverability_impact": "Cleaning 12,000 dead subscribers will likely improve overall open rates by 5-8 percentage points"
+        },
         "emails": [
           {
-            "email_number": 1,
-            "timing": "1 hour after abandonment",
-            "subject_lines": ["A: Still thinking it over?", "B: You left something behind", "C: Your cart is saved (for now)"],
-            "body": "Looks like life got in the way.\n\nYour cart is still saved — your [Product Name] is waiting.\n\n[→ Complete your order](link)\n\nAny questions? Reply here — real humans answer within 2 hours.",
-            "cta": "Complete my order →"
+            "name": "Email 1: The 'We Miss You'",
+            "day": 0,
+            "subject": "We haven't seen you in a while 👋",
+            "alt_subject": "Is this goodbye?",
+            "body": "Hi {{first_name}},\n\nIt's been 90 days since you last opened one of our emails. We're not going to pretend that doesn't sting a little. 😅\n\nA lot has changed since you've been away:\n\n🆕 New workout programs: HIIT, Yoga, Strength — 50+ new classes\n🆕 AI-powered plans that adapt to your schedule\n🆕 Community challenges with real prizes\n\nWant to come back and check it out?\n\n[Reactivate my account — free for 7 days →]\n\nIf you'd rather not hear from us anymore, we understand. You can [unsubscribe here] — no hard feelings.\n\nKeep moving,\nThe [App] Team",
+            "cta": "Reactivate — 7-day free access"
           },
           {
-            "email_number": 2,
-            "timing": "24 hours after abandonment",
-            "subject_lines": ["A: This is what makes it different", "B: Before you decide — one thing worth knowing", "C: The question we get asked most before someone buys"],
-            "body": "The most common question we get before someone orders:\n\n'Is it really worth $89 for a wallet?'\n\nHonest answer: For most people, no. A $20 wallet holds cards.\n\nBut if you've ever had a wallet:\n- Fall apart at the seams after 8 months\n- Crack in cold weather\n- Bulk up until it sits sideways in your pocket\n\nThis one doesn't do any of those things.\n\nWe use full-grain leather — the same grade used in quality belts and shoes that last decades. Not bonded leather. Not 'genuine leather' (which is the lowest possible grade). Full-grain.\n\nAnd we back it with a lifetime warranty — if it ever fails, we replace it.\n\n[→ Complete your order](link)\n\nOr reply if you have questions.",
-            "cta": "Complete my order →"
+            "name": "Email 2: The Incentive",
+            "day": 4,
+            "subject": "Come back for 50% off your first month",
+            "body": "Hi {{first_name}},\n\nWe'd love to have you back. Here's a reason to give us another shot:\n\n**50% off your first month back — just $6.**\n\n[Restart for $6 →]\n\nOffer expires in 5 days.",
+            "cta": "Restart for $6"
           },
           {
-            "email_number": 3,
-            "timing": "48 hours after abandonment",
-            "subject_lines": ["A: Last call — your cart expires tonight", "B: One final thing (then I'll stop)", "C: This is the last one (I promise)"],
-            "body": "Cart expires at midnight tonight.\n\nIf the price was the hesitation — use FIRST10 for 10% off your first order.\n\n[→ Claim 10% off now](link)\n\nIf it wasn't the price — no hard feelings. Let me know what held you back and I'll make sure we fix it for the next person.\n\n— [Founder Name], [Brand]",
-            "cta": "Claim 10% off →",
-            "notes": "Only use discount if margin allows. Test 'no discount' vs 'discount' version — often conversion rate is similar but margin is better without."
+            "name": "Email 3: The Goodbye",
+            "day": 10,
+            "subject": "Last email from us (unless you say stay)",
+            "body": "Hi {{first_name}},\n\nThis is our last email. We don't want to fill your inbox if you're not interested — that's not cool for either of us.\n\n**Click below if you want to keep hearing from us:**\n\n[Yes, keep me subscribed →]\n\nIf we don't hear from you, we'll remove you from our list in 5 days. Your account and data will stay safe if you ever want to come back.\n\nNo hard feelings. Seriously. 💪\n\nThe [App] Team",
+            "cta": "Keep me subscribed → /preferences/confirm"
           }
-        ]
+        ],
+        "post_sequence_rules": {
+          "re_engaged": "Subscribers who open or click any email → move to 'Re-activated' segment, send a 'Welcome Back' email with personalized workout recommendation",
+          "still_inactive": "Subscribers who don't engage with any of the 3 emails → unsubscribe from marketing emails after 5-day grace period. Keep in CRM for transactional emails only.",
+          "impact": "Expected outcome: re-engage ~2,250 subscribers (15%), clean ~12,750 from active list. Deliverability should improve significantly within 2-4 weeks."
+        }
       }
     }
   ]

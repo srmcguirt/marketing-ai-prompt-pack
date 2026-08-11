@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the MCPForge Marketing AI Prompt Pack.
+All notable changes to the WireForge Marketing AI Prompt Pack.
 
 ## [1.0.0] — 2026-08-10
 
