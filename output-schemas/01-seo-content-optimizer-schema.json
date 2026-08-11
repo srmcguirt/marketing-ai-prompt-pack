@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SEO Content Optimizer Output",
+  "description": "Structured output schema for SEO content optimization analysis",
+  "type": "object",
+  "required": ["search_intent", "target_keywords", "optimized_elements", "content_recommendations"],
+  "properties": {
+    "search_intent": {
+      "type": "object",
+      "required": ["type", "explanation"],
+      "properties": {
+        "type": { "type": "string", "enum": ["informational", "navigational", "transactional", "commercial_investigation"] },
+        "explanation": { "type": "string" }
+      }
+    },
+    "target_keywords": {
+      "type": "object",
+      "required": ["primary", "secondary"],
+      "properties": {
+        "primary": {
+          "type": "object",
+          "required": ["keyword", "monthly_volume", "difficulty"],
+          "properties": {
+            "keyword": { "type": "string" },
+            "monthly_volume": { "type": "string" },
+            "difficulty": { "type": "string" },
+            "current_rank": { "type": "string" }
+          }
+        },
+        "secondary": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "keyword": { "type": "string" },
+              "monthly_volume": { "type": "string" },
+              "difficulty": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "competitive_analysis": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": { "type": "string" },
+          "word_count": { "type": "integer" },
+          "strengths": { "type": "array", "items": { "type": "string" } },
+          "content_gaps": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "optimized_elements": {
+      "type": "object",
+      "required": ["title_tag", "meta_description", "url_slug", "header_structure"],
+      "properties": {
+        "title_tag": { "type": "string", "maxLength": 60 },
+        "meta_description": { "type": "string", "maxLength": 160 },
+        "url_slug": { "type": "string" },
+        "header_structure": { "type": "array", "items": { "type": "string" } },
+        "content_outline": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "section": { "type": "string" },
+              "target_keyword": { "type": "string" },
+              "word_count_target": { "type": "integer" }
+            }
+          }
+        },
+        "schema_markup": {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string" },
+            "snippet": { "type": "string" }
+          }
+        }
+      }
+    },
+    "content_recommendations": {
+      "type": "object",
+      "properties": {
+        "content_gaps": { "type": "array", "items": { "type": "string" } },
+        "internal_links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "target_page": { "type": "string" },
+              "anchor_text": { "type": "string" },
+              "context": { "type": "string" }
+            }
+          }
+        },
+        "featured_snippet_opportunity": { "type": "object", "properties": { "query": { "type": "string" }, "format": { "type": "string" }, "optimization_tip": { "type": "string" } } },
+        "technical_seo_checklist": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Email Sequence Writer Output",
+  "description": "Structured output schema for email marketing sequence creation",
+  "type": "object",
+  "required": ["sequence_overview", "emails"],
+  "properties": {
+    "sequence_overview": {
+      "type": "object",
+      "required": ["type", "trigger", "goal"],
+      "properties": {
+        "type": { "type": "string", "enum": ["welcome", "nurture", "cart_abandonment", "re_engagement", "launch", "post_purchase", "onboarding", "win_back"] },
+        "trigger": { "type": "string" },
+        "goal": { "type": "string" },
+        "segment": { "type": "string" },
+        "expected_metrics": { "type": "object", "properties": { "open_rate": { "type": "string" }, "click_rate": { "type": "string" }, "conversion_rate": { "type": "string" }, "unsubscribe_rate": { "type": "string" } } }
+      }
+    },
+    "emails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "day", "subject", "body", "cta"],
+        "properties": {
+          "name": { "type": "string" },
+          "day": { "type": "integer" },
+          "delay": { "type": "string" },
+          "subject": { "type": "string", "maxLength": 50 },
+          "alt_subject": { "type": "string", "maxLength": 50 },
+          "preview_text": { "type": "string", "maxLength": 130 },
+          "send_time": { "type": "string" },
+          "body": { "type": "string" },
+          "cta": { "type": "object", "properties": { "text": { "type": "string" }, "url": { "type": "string" } } },
+          "dynamic_elements": { "type": "array", "items": { "type": "string" } },
+          "conditional_content": { "type": "array", "items": { "type": "object", "properties": { "condition": { "type": "string" }, "content": { "type": "string" } } } },
+          "ab_test": { "type": "object", "properties": { "variable": { "type": "string" }, "variant_a": { "type": "string" }, "variant_b": { "type": "string" } } }
+        }
+      }
+    },
+    "automation_rules": {
+      "type": "object",
+      "properties": {
+        "branch_logic": { "type": "array", "items": { "type": "object", "properties": { "condition": { "type": "string" }, "action": { "type": "string" } } } },
+        "exit_conditions": { "type": "array", "items": { "type": "string" } },
+        "suppression_rules": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "performance_benchmarks": {
+      "type": "array",
+      "items": { "type": "object", "properties": { "metric": { "type": "string" }, "target": { "type": "string" }, "industry_average": { "type": "string" } } }
+    }
+  }
+}

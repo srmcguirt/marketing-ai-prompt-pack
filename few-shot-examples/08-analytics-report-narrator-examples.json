@@ -1,0 +1,145 @@
+{
+  "prompt_name": "Analytics Report Narrator",
+  "examples": [
+    {
+      "input": "Here's our marketing dashboard data for October:\n- Website sessions: 45,200 (Sept: 38,100)\n- Organic sessions: 22,800 (Sept: 18,400)\n- Paid sessions: 8,300 (Sept: 9,200)\n- Email sessions: 6,100 (Sept: 5,400)\n- Social sessions: 4,200 (Sept: 3,100)\n- Direct: 3,800 (Sept: 2,000)\n- Free trial signups: 312 (Sept: 285)\n- Trial-to-paid conversion: 11.2% (Sept: 13.8%)\n- MRR: $48,200 (Sept: $44,100)\n- CAC: $142 (Sept: $128)\n- Churn: 4.2% (Sept: 3.8%)\n\nWe're a B2B SaaS with a $49/month product. Team wants to know if we should be happy or worried.",
+      "output": {
+        "executive_summary": {
+          "headline": "Traffic is growing, but conversion quality is declining. MRR is up because volume compensated — but the underlying unit economics are moving in the wrong direction.",
+          "scorecard": [
+            {"metric": "Website Sessions", "current": "45,200", "previous": "38,100", "change": "+18.6%", "status": "green"},
+            {"metric": "Organic Sessions", "current": "22,800", "previous": "18,400", "change": "+23.9%", "status": "green"},
+            {"metric": "Free Trial Signups", "current": "312", "previous": "285", "change": "+9.5%", "status": "yellow"},
+            {"metric": "Trial → Paid Conversion", "current": "11.2%", "previous": "13.8%", "change": "-2.6pp", "status": "red"},
+            {"metric": "MRR", "current": "$48,200", "previous": "$44,100", "change": "+9.3%", "status": "green"},
+            {"metric": "CAC", "current": "$142", "previous": "$128", "change": "+10.9%", "status": "red"},
+            {"metric": "Monthly Churn", "current": "4.2%", "previous": "3.8%", "change": "+0.4pp", "status": "red"}
+          ],
+          "key_takeaways": [
+            "Organic traffic grew 24% — this is your strongest channel and the growth is healthy. SEO investment is paying off.",
+            "Trial-to-paid conversion dropped from 13.8% to 11.2%. This is the most concerning number. You're attracting more visitors but converting them at a lower rate — suggesting traffic quality is declining or the trial experience needs improvement.",
+            "CAC increased to $142 (+11%). Combined with lower conversion rates, each paid customer now costs more to acquire. LTV/CAC ratio needs monitoring — at $49/month with 4.2% churn (~24 month average lifetime), LTV is ~$1,176. LTV/CAC of 8.3x is still healthy but was 9.2x last month.",
+            "Churn ticked up to 4.2%. One month isn't a trend, but two consecutive months of increase warrants investigation. Are recently acquired customers churning faster than older cohorts?"
+          ]
+        },
+        "channel_analysis": {
+          "organic": {
+            "performance": "22,800 sessions (+24%) — best performing channel by growth rate and volume",
+            "why_it_matters": "$0 marginal acquisition cost. If organic-sourced trials convert at the same rate as overall, this channel produced ~157 trials at $0 CAC.",
+            "recommendation": "Double down. What content drove the spike? Identify the top 5 landing pages by traffic growth and create more content in those topic clusters."
+          },
+          "paid": {
+            "performance": "8,300 sessions (-9.8%) — declining while spend likely remained constant or increased",
+            "why_it_matters": "If paid traffic is declining while CAC is rising, your ad efficiency is deteriorating. CPC may be increasing or CTR declining.",
+            "recommendation": "Audit top campaigns. Pause underperformers. Refresh ad creative — likely experiencing ad fatigue after running the same ads for 60+ days."
+          },
+          "social": {
+            "performance": "4,200 sessions (+35%) — fastest growth rate but smallest channel",
+            "why_it_matters": "Social traffic typically converts poorly for B2B SaaS. If this traffic is inflating sessions without converting, it could explain the overall conversion decline.",
+            "recommendation": "Check social traffic conversion rate separately. If it's <5% trial signup rate while other channels are >8%, the social traffic growth is masking a quality problem."
+          }
+        },
+        "deep_dive": {
+          "topic": "Trial Conversion Rate Decline (13.8% → 11.2%)",
+          "analysis": "The 2.6 percentage point drop represents approximately 8 fewer paying customers than expected at September's rate. At $49/month, that's ~$4,704 in annualized lost revenue from this month alone.",
+          "hypotheses": [
+            {"hypothesis": "Traffic quality declined — more unqualified visitors entering trials", "confidence": "MEDIUM", "check": "Segment trial-to-paid by traffic source. If social/organic trial conversion dropped while paid held steady, the new organic traffic may be attracting the wrong audience."},
+            {"hypothesis": "Trial experience degradation — onboarding flow changed or broke", "confidence": "LOW", "check": "Check for product changes in October. Review trial funnel step-by-step completion rates in your analytics tool."},
+            {"hypothesis": "Competitive pressure — a competitor launched or ran a promotion", "confidence": "MEDIUM", "check": "Check competitor activity: new features, pricing changes, aggressive ad campaigns during October."}
+          ],
+          "recommended_action": "This is the #1 thing to investigate this week. Run a cohort analysis: are October trials converting worse across all channels, or is it isolated to one source? That answer determines whether this is a traffic quality problem or a product/experience problem."
+        },
+        "action_items": {
+          "this_week": [
+            "Investigate trial conversion drop — segment by source, run cohort analysis",
+            "Audit paid campaigns — check CPC trend, CTR, and creative freshness"
+          ],
+          "this_month": [
+            "Analyze social traffic quality — determine if high-growth social sessions are converting or just inflating vanity metrics",
+            "Review churn by acquisition cohort — are newer customers churning faster?"
+          ],
+          "this_quarter": [
+            "Build a trial activation scoring model — identify which trial behaviors predict conversion so you can intervene early",
+            "Consider adding a 'trial quality' metric to the dashboard — trial signups without engagement should not be celebrated"
+          ]
+        },
+        "bottom_line": "Short answer: cautiously worried. The topline numbers (traffic, MRR) look good, but the efficiency metrics (conversion rate, CAC, churn) are all moving in the wrong direction. October's MRR growth was powered by volume, not efficiency. If conversion continues to decline, you'll need significantly more traffic just to maintain current growth — that's an expensive treadmill."
+      }
+    },
+    {
+      "input": "Our email campaign last week had a 42% open rate and 2.1% click rate. Is that good?",
+      "output": {
+        "context_needed": "Those numbers are meaningless without context. Here's how to evaluate them:",
+        "analysis": {
+          "open_rate_42_percent": {
+            "assessment": "Above average for most industries (15-25% is typical). But open rate is increasingly unreliable due to Apple Mail Privacy Protection — Apple pre-loads email pixels, inflating open rates by 30-50% for iOS users.",
+            "question": "What percentage of your list uses Apple Mail? If it's over 50% (common for consumer audiences), your real open rate might be closer to 28-32%.",
+            "benchmark": "B2B SaaS: 25-35% is good. E-commerce: 15-25% is good. Newsletter/media: 35-50% is good. Without knowing your industry and list quality, 42% is either excellent or artificially inflated."
+          },
+          "click_rate_2_1_percent": {
+            "assessment": "This is the metric that actually matters — it's harder to fake. 2.1% click-through rate is roughly average across industries.",
+            "benchmark": "B2B: 2.5-3.5% is good. E-commerce: 1.5-2.5% is good. If you're B2B, you're slightly below average. If you're e-commerce, you're solid.",
+            "improvement_levers": [
+              "Make the CTA more specific — 'Read the full guide' vs 'Click here'",
+              "Move the primary CTA higher in the email — most people don't scroll past the first fold",
+              "Test button CTA vs text link — buttons typically get 28% higher click rates",
+              "Reduce the number of links — emails with one CTA get 371% more clicks than those with multiple"
+            ]
+          },
+          "metric_you_should_track_instead": "Click-to-open rate (CTOR) = clicks / opens. For your campaign: 2.1% / 42% = 5.0%. This tells you: of people who opened, how many found the content compelling enough to click? Industry average CTOR is 10-15%. Your 5% suggests the subject line is doing its job (getting opens) but the content isn't compelling enough to drive action."
+        },
+        "action_items": [
+          "Check Apple Mail percentage in your list — adjust open rate expectations accordingly",
+          "Focus on CTOR improvement: test different content formats, CTA placement, and personalization",
+          "Compare this campaign to your last 10 campaigns — one data point isn't a trend"
+        ]
+      }
+    },
+    {
+      "input": "Monthly board report: Our paid advertising spent $28,000 across Google Ads ($18,000) and Meta ($10,000). We got 156 demo requests (Google: 98, Meta: 58). 42 became customers (Google: 28, Meta: 14). Average deal size: $8,400 ARR. Board wants to know: should we increase or decrease ad spend?",
+      "output": {
+        "executive_summary": {
+          "headline": "Paid advertising generated $352,800 in ARR from $28,000 in spend. ROAS is 12.6x. Recommend increasing Google spend by 25% and testing Meta scaling with caution.",
+          "scorecard": [
+            {"metric": "Total Ad Spend", "value": "$28,000"},
+            {"metric": "Demo Requests", "value": "156", "cost_per": "$179/demo"},
+            {"metric": "New Customers", "value": "42", "cost_per": "$667/customer (CAC)"},
+            {"metric": "ARR Generated", "value": "$352,800", "calc": "42 × $8,400"},
+            {"metric": "Payback Period", "value": "0.95 months", "calc": "$667 CAC ÷ $700/month"},
+            {"metric": "ROAS (Annual)", "value": "12.6x", "calc": "$352,800 ÷ $28,000"},
+            {"metric": "LTV/CAC", "value": "12.6x (assuming 24-month avg lifetime)"}
+          ]
+        },
+        "channel_breakdown": {
+          "google_ads": {
+            "spend": "$18,000",
+            "demos": 98,
+            "customers": 28,
+            "cost_per_demo": "$184",
+            "cac": "$643",
+            "demo_to_customer": "28.6%",
+            "arr_generated": "$235,200",
+            "roas": "13.1x",
+            "verdict": "Strong performer. Demo-to-customer rate of 28.6% is above B2B SaaS average (20-25%), indicating high intent traffic. Google captures demand that already exists — people searching for your solution category."
+          },
+          "meta_ads": {
+            "spend": "$10,000",
+            "demos": 58,
+            "customers": 14,
+            "cost_per_demo": "$172",
+            "cac": "$714",
+            "demo_to_customer": "24.1%",
+            "arr_generated": "$117,600",
+            "roas": "11.8x",
+            "verdict": "Good but lower quality than Google. Lower demo-to-customer rate (24.1% vs 28.6%) suggests Meta audiences are less purchase-intent. Still profitable at 11.8x ROAS but monitor closely when scaling — Meta ROAS typically degrades faster than Google when you increase spend."
+          }
+        },
+        "recommendation": {
+          "google": "INCREASE by 25% to $22,500. Google has strong intent signals and higher conversion quality. Test: expand to new keyword themes and increase bids on top-performing campaigns. Watch for CPC inflation — if CPC rises more than 15% without proportional conversion improvement, you've hit a ceiling.",
+          "meta": "HOLD at $10,000 and optimize before scaling. The 4.5pp lower demo-to-customer rate means Meta leads need more nurturing. Before increasing spend: 1) Add a lead scoring model to qualify Meta demos before they reach sales, 2) Test new audiences (lookalike from your best customers, not just interest targeting), 3) If these optimizations improve demo-to-customer to >27%, then scale by 20%.",
+          "board_summary": "With a sub-1-month payback period and 12.6x ROAS, paid is printing money. The question isn't whether to increase — it's how fast you can scale without degrading unit economics. Conservative recommendation: increase total spend to $35,000 (+25%), allocate the increase entirely to Google, and run Meta optimization experiments within existing budget."
+        }
+      }
+    }
+  ]
+}

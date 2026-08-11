@@ -1,9 +1,9 @@
-# 📣 MCPForge — Marketing AI Prompt Pack
+# 📣 WireForge — Marketing AI Prompt Pack
 
 **8 expert-level AI prompt templates for marketing professionals and agencies.**  
 Stop getting generic outputs. Start getting campaign-ready results.
 
-> Built by **MCPForge** — production-grade AI tools for professionals.
+> Built by **WireForge** — production-grade AI tools for professionals.
 
 ---
 
@@ -46,7 +46,7 @@ That's what this pack is.
 
 **Output:** Generic headline. Vague bullets. Template-sounding copy that converts at 1%.
 
-### ✅ MCPForge Landing Page Copywriter
+### ✅ WireForge Landing Page Copywriter
 > *[Paste the prompt, fill in your product details, audience, differentiator, social proof]*
 
 **Output:** 
@@ -213,15 +213,15 @@ Attribution appreciated but not required.
 
 ---
 
-## About MCPForge
+## About WireForge
 
-MCPForge builds production-grade AI tools for professionals — prompt packs, MCP servers, agent boilerplates, and more.
+WireForge builds production-grade AI tools for professionals — prompt packs, MCP servers, agent boilerplates, and more.
 
-- 🌐 [mcpforge.io](https://mcpforge.io)
-- 🐙 [github.com/mcpforge](https://github.com/mcpforge)
-- 🐦 [@mcpforge](https://x.com/mcpforge)
+- 🌐 [wireforge.dev](https://wireforge.dev)
+- 🐙 [github.com/srmcguirt](https://github.com/srmcguirt)
+- 🐦 [@mcpforge](https://x.com/wireforge)
 
 **Other products:**
-- [DevOps AI Prompt Pack](https://gumroad.com/mcpforge) — 8 prompts for DevOps and infrastructure engineers
-- [MCP Server Starter Kit](https://gumroad.com/mcpforge) — Production-ready MCP server boilerplate
-- [Claude Agent Boilerplate](https://gumroad.com/mcpforge) — Build production Claude agents fast
+- [DevOps AI Prompt Pack](https://srmcguirt.gumroad.com) — 8 prompts for DevOps and infrastructure engineers
+- [MCP Server Starter Kit](https://srmcguirt.gumroad.com) — Production-ready MCP server boilerplate
+- [Claude Agent Boilerplate](https://srmcguirt.gumroad.com) — Build production Claude agents fast

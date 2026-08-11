@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ad Copy Generator Output",
+  "description": "Structured output schema for Google Ads and Meta Ads copy generation",
+  "type": "object",
+  "required": ["campaign_brief"],
+  "properties": {
+    "campaign_brief": {
+      "type": "object",
+      "required": ["objective", "target_audience", "value_proposition"],
+      "properties": {
+        "objective": { "type": "string", "enum": ["awareness", "traffic", "leads", "sales", "app_installs"] },
+        "target_audience": { "type": "string" },
+        "value_proposition": { "type": "string" },
+        "competitive_differentiators": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "google_ads": {
+      "type": "object",
+      "properties": {
+        "ad_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["theme", "keywords", "headlines", "descriptions"],
+            "properties": {
+              "theme": { "type": "string" },
+              "keywords": { "type": "array", "items": { "type": "string" } },
+              "negative_keywords": { "type": "array", "items": { "type": "string" } },
+              "headlines": { "type": "array", "items": { "type": "string", "maxLength": 30 }, "minItems": 5, "maxItems": 15 },
+              "descriptions": { "type": "array", "items": { "type": "string", "maxLength": 90 }, "minItems": 2, "maxItems": 4 },
+              "pinning_recommendations": { "type": "string" }
+            }
+          }
+        },
+        "extensions": {
+          "type": "object",
+          "properties": {
+            "sitelinks": { "type": "array", "items": { "type": "string" } },
+            "callouts": { "type": "array", "items": { "type": "string" } },
+            "structured_snippets": { "type": "object", "properties": { "header": { "type": "string" }, "values": { "type": "array", "items": { "type": "string" } } } }
+          }
+        }
+      }
+    },
+    "meta_ads": {
+      "type": "object",
+      "properties": {
+        "ad_sets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["audience", "variations"],
+            "properties": {
+              "audience": { "type": "string" },
+              "variations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["hook_type", "primary_text", "headline"],
+                  "properties": {
+                    "hook_type": { "type": "string", "enum": ["problem", "solution", "curiosity", "social_proof", "emotional", "transformation", "comparison"] },
+                    "primary_text": { "type": "string" },
+                    "headline": { "type": "string", "maxLength": 40 },
+                    "description": { "type": "string", "maxLength": 30 },
+                    "cta_button": { "type": "string", "enum": ["Learn More", "Shop Now", "Sign Up", "Get Offer", "Book Now", "Contact Us", "Download", "Apply Now"] }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "creative_direction": { "type": "array", "items": { "type": "object", "properties": { "format": { "type": "string" }, "concept": { "type": "string" }, "specs": { "type": "string" } } } }
+      }
+    },
+    "testing_plan": {
+      "type": "array",
+      "items": { "type": "object", "properties": { "test_name": { "type": "string" }, "variable": { "type": "string" }, "hypothesis": { "type": "string" }, "budget": { "type": "string" }, "duration": { "type": "string" } } }
+    },
+    "performance_benchmarks": {
+      "type": "object",
+      "properties": {
+        "expected_ctr": { "type": "string" },
+        "expected_cpc": { "type": "string" },
+        "expected_conversion_rate": { "type": "string" }
+      }
+    }
+  }
+}
