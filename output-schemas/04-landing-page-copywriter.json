@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Landing Page Copy",
+  "type": "object",
+  "required": ["product", "above_fold", "problem_section", "features_benefits", "social_proof", "faq", "final_cta"],
+  "properties": {
+    "product": {"type": "string"},
+    "offer": {"type": "string"},
+    "above_fold": {
+      "type": "object",
+      "required": ["h1", "subheadline", "primary_cta", "social_proof_snippet"],
+      "properties": {
+        "h1": {"type": "string", "maxLength": 80},
+        "subheadline": {"type": "string", "maxLength": 150},
+        "hero_visual_brief": {"type": "string"},
+        "primary_cta": {"type": "string", "maxLength": 40},
+        "social_proof_snippet": {"type": "string"}
+      }
+    },
+    "problem_section": {
+      "type": "object",
+      "required": ["headline", "pain_points", "bridge"],
+      "properties": {
+        "headline": {"type": "string"},
+        "pain_points": {"type": "array", "items": {"type": "string"}, "minItems": 3},
+        "bridge": {"type": "string"}
+      }
+    },
+    "features_benefits": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["feature", "benefit_headline", "elaboration"],
+        "properties": {
+          "feature": {"type": "string"},
+          "benefit_headline": {"type": "string"},
+          "elaboration": {"type": "string"},
+          "icon": {"type": "string"}
+        }
+      }
+    },
+    "social_proof": {
+      "type": "object",
+      "properties": {
+        "testimonials": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["quote", "attribution"],
+            "properties": {
+              "quote": {"type": "string", "minLength": 50},
+              "attribution": {"type": "string"},
+              "result": {"type": "string"}
+            }
+          }
+        },
+        "review_aggregate": {"type": "string"},
+        "logo_bar_copy": {"type": "string"}
+      }
+    },
+    "faq": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["question", "answer"],
+        "properties": {
+          "question": {"type": "string"},
+          "answer": {"type": "string"},
+          "objection_category": {"type": "string", "enum": ["price", "risk", "complexity", "time", "comparison", "commitment", "other"]}
+        }
+      }
+    },
+    "final_cta": {
+      "type": "object",
+      "required": ["headline", "bullets", "cta_button"],
+      "properties": {
+        "headline": {"type": "string"},
+        "bullets": {"type": "array", "items": {"type": "string"}, "minItems": 3},
+        "cta_button": {"type": "string"},
+        "risk_reversal": {"type": "string"},
+        "urgency_element": {"type": "string"}
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Marketing Analytics Report",
+  "type": "object",
+  "required": ["period", "executive_summary", "scorecard", "channel_analysis", "recommendations", "watchlist"],
+  "properties": {
+    "period": {"type": "string"},
+    "comparison_period": {"type": "string"},
+    "audience": {"type": "string"},
+    "executive_summary": {
+      "type": "string",
+      "description": "3-5 sentence narrative: performance vs goal, biggest win, biggest concern, #1 recommendation",
+      "minLength": 100,
+      "maxLength": 800
+    },
+    "scorecard": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["metric", "target", "actual", "vs_target"],
+        "properties": {
+          "metric": {"type": "string"},
+          "target": {"type": "string"},
+          "actual": {"type": "string"},
+          "vs_target": {"type": "string"},
+          "vs_prior_period": {"type": "string"},
+          "status": {"type": "string", "enum": ["on_track", "above_target", "below_target", "critical"]}
+        }
+      }
+    },
+    "channel_analysis": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["channel", "narrative", "key_metrics", "recommendation"],
+        "properties": {
+          "channel": {"type": "string"},
+          "narrative": {"type": "string", "minLength": 50},
+          "key_metrics": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {"type": "string"},
+                "value": {"type": "string"},
+                "change": {"type": "string"}
+              }
+            }
+          },
+          "anomalies": {"type": "string"},
+          "recommendation": {"type": "string"}
+        }
+      }
+    },
+    "campaign_performance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "campaign_name": {"type": "string"},
+          "spend": {"type": "number"},
+          "impressions": {"type": "integer"},
+          "clicks": {"type": "integer"},
+          "ctr": {"type": "number"},
+          "conversions": {"type": "integer"},
+          "cpa": {"type": "number"},
+          "roas": {"type": "number"},
+          "status": {"type": "string", "enum": ["outperforming", "on_target", "underperforming", "paused"]},
+          "narrative": {"type": "string"}
+        }
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 7,
+      "items": {
+        "type": "object",
+        "required": ["priority", "action", "expected_impact"],
+        "properties": {
+          "priority": {"type": "integer", "minimum": 1},
+          "urgency": {"type": "string", "enum": ["this_week", "this_month", "investigate"]},
+          "action": {"type": "string"},
+          "expected_impact": {"type": "string"},
+          "owner": {"type": "string"},
+          "timeline": {"type": "string"}
+        }
+      }
+    },
+    "watchlist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["status", "item"],
+        "properties": {
+          "status": {"type": "string", "enum": ["urgent", "watch", "opportunity"]},
+          "item": {"type": "string"},
+          "action_required": {"type": "string"}
+        }
+      }
+    },
+    "data_quality_notes": {"type": "string"}
+  }
+}

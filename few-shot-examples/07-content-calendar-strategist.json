@@ -1,0 +1,71 @@
+{
+  "prompt_name": "Content Calendar Strategist",
+  "examples": [
+    {
+      "id": 1,
+      "scenario": "B2B SaaS quarterly content plan — 1 marketing manager",
+      "input": {
+        "company": "Formli — no-code form builder with analytics",
+        "goal": "Generate 200 inbound leads per month from content",
+        "audience": "Marketing managers and growth hackers at SaaS companies",
+        "resources": "1 marketing manager, 15 hours/week for content, $500/month for design",
+        "channels": ["Blog (SEO)", "LinkedIn", "Email newsletter", "Twitter/X"],
+        "current_state": "Blog exists with 20 posts, LinkedIn has 800 followers, newsletter 1200 subscribers"
+      },
+      "output": {
+        "content_pillars": [
+          {
+            "name": "Form Optimization & CRO",
+            "why": "High-intent — people searching 'form conversion rate' are potential buyers. Maps directly to product value.",
+            "audience_stage": "TOFU/MOFU",
+            "primary_channel": "Blog (SEO) → LinkedIn repurpose",
+            "content_types": ["How-to guides", "Data studies", "Checklist templates"],
+            "monthly_output": "2 long-form blog posts + 8 LinkedIn posts + 4 newsletter sections"
+          },
+          {
+            "name": "No-Code Marketing Stack",
+            "why": "Positions Formli in a broader category — attracts audience beyond just 'form builders'",
+            "audience_stage": "TOFU",
+            "primary_channel": "LinkedIn + Blog",
+            "content_types": ["Tool roundups", "Workflow teardowns", "Guest posts"]
+          },
+          {
+            "name": "Customer Success Stories",
+            "why": "High conversion — readers see themselves in the story and trust the solution",
+            "audience_stage": "MOFU/BOFU",
+            "primary_channel": "Blog + LinkedIn + Email",
+            "content_types": ["Case studies", "Quote graphics", "Before/after data"]
+          }
+        ],
+        "monthly_calendar_week_1": [
+          {"day": "Mon", "channel": "Blog", "type": "How-to", "title": "How to Reduce Form Abandonment Rate by 40%: A Data-Backed Guide", "goal": "Organic traffic — high-intent keyword", "production_hours": 5},
+          {"day": "Tue", "channel": "LinkedIn", "type": "Text post", "hook": "The average contact form converts at 2.3%. Here's why — and what changes it:", "goal": "Engagement — repurpose blog data", "production_hours": 0.5},
+          {"day": "Wed", "channel": "Newsletter", "type": "Weekly roundup", "title": "3 form strategies, 2 no-code tools, 1 insight from our data", "goal": "Retention + traffic", "production_hours": 1.5},
+          {"day": "Thu", "channel": "LinkedIn", "type": "Carousel", "title": "6 form mistakes killing your conversion rate (slides)", "goal": "Shares — repurpose Monday blog", "production_hours": 2},
+          {"day": "Fri", "channel": "Twitter/X", "type": "Thread", "hook": "Most contact forms are conversion disasters. Thread: what to fix and why:", "goal": "Reach new audience", "production_hours": 0.5}
+        ],
+        "repurposing_system": {
+          "source": "1 long-form blog post (4-6 hours)",
+          "derivatives": [
+            "LinkedIn text post — pull the most counterintuitive stat (30 min)",
+            "LinkedIn carousel — top 5 tactics as slides (1.5 hours with designer)",
+            "Twitter/X thread — 8 tweets, one per subhead (30 min)",
+            "Newsletter section — 200-word summary + link (20 min)",
+            "LinkedIn poll — 'Which of these form mistakes is killing your conversion?' (5 min)",
+            "Instagram infographic brief — top 3 stats visualized (brief for designer, 30 min)"
+          ],
+          "total_additional_content_from_1_post": "5-6 additional pieces",
+          "total_additional_hours": "2.5-3 hours"
+        },
+        "kpis": {
+          "monthly_targets": [
+            {"metric": "Blog organic sessions", "target": "+15% MoM", "tool": "Google Search Console"},
+            {"metric": "Email signups from content", "target": "50/month", "tool": "ConvertKit"},
+            {"metric": "LinkedIn post engagement rate", "target": ">3%", "tool": "LinkedIn Analytics"},
+            {"metric": "Content-attributed leads", "target": "100/month by month 3", "tool": "HubSpot UTM tracking"}
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "prompt_name": "Ad Copy Generator",
+  "examples": [
+    {
+      "id": 1,
+      "scenario": "Google Search RSA + Meta ad for SaaS lead gen",
+      "input": {
+        "product": "Rosterwise — AI scheduling software for healthcare staffing",
+        "campaign_goal": "Lead generation — book a demo",
+        "audience": "Hospital staffing coordinators and nursing managers",
+        "differentiator": "Reduces schedule conflicts by 78% in first month, integrates with Epic",
+        "offer": "Free 30-day pilot",
+        "primary_keyword": "healthcare staff scheduling software"
+      },
+      "output": {
+        "google_rsa": {
+          "headlines": [
+            {"text": "Healthcare Scheduling Software", "pin": "H1 — keyword match", "chars": 30},
+            {"text": "Reduce Schedule Conflicts 78%", "pin": "H2 — result", "chars": 29},
+            {"text": "Integrates With Epic & Cerner", "pin": "H2 alt — integration", "chars": 29},
+            {"text": "Free 30-Day Hospital Pilot", "pin": "H3 — offer", "chars": 26},
+            {"text": "Staff Scheduling AI — Free Trial", "pin": "H1 alt", "chars": 32},
+            {"text": "Trusted by 200+ Hospital Systems", "chars": 33},
+            {"text": "No More Double-Booked Nurses", "chars": 29},
+            {"text": "Automate Your On-Call Schedule", "chars": 30},
+            {"text": "Book a Demo in 15 Minutes", "chars": 25},
+            {"text": "Reduce Overtime Costs Now", "chars": 25},
+            {"text": "Staffing Gaps? AI Fills Them", "chars": 29},
+            {"text": "Healthcare-Specific Scheduling AI", "chars": 33}
+          ],
+          "descriptions": [
+            "Stop fixing schedule conflicts manually. Rosterwise AI reduces conflicts 78% in 30 days. Epic/Cerner integration. Free pilot.",
+            "Healthcare staffing coordinators save 12 hrs/week with Rosterwise. Book a 15-min demo — see your live schedule in the tool.",
+            "200+ hospital systems trust Rosterwise for nurse scheduling. Handles PTO, certifications, and overtime rules automatically.",
+            "Free 30-day pilot for qualified hospitals. Setup takes 48 hours. See ROI before you pay a cent."
+          ],
+          "sitelinks": [
+            {"title": "See Customer Stories", "line1": "How Memorial Health cut overtime", "line2": "by 31% in 60 days"},
+            {"title": "Epic Integration Guide", "line1": "Native Epic/Cerner sync", "line2": "Setup in under 2 hours"},
+            {"title": "Pricing for Hospitals", "line1": "Per-bed pricing that scales", "line2": "with your facility size"},
+            {"title": "Book a Live Demo", "line1": "15-minute walkthrough", "line2": "with a healthcare specialist"}
+          ],
+          "callouts": ["HIPAA Compliant", "Epic Integration", "24/7 Support", "Free Implementation", "No Long-Term Contract", "SOC 2 Certified", "Conflict Detection AI", "PTO Rule Engine"]
+        },
+        "meta_ads": {
+          "cold_audience_feed_ad": {
+            "primary_text": "Your scheduling coordinator is spending 12 hours a week on a spreadsheet.\n\nRosterwise AI handles it in 90 minutes.\n\nConflict detection. PTO rules. Certification tracking. On-call rotations.\n\nAll automated. Epic-connected. HIPAA compliant.\n\n200+ hospital systems made the switch. Free 30-day pilot for qualified facilities.",
+            "headline": "AI Scheduling for Hospitals",
+            "description": "Free pilot. Epic integration.",
+            "cta_button": "Learn More",
+            "visual_brief": "Side-by-side: left shows a staffing coordinator surrounded by paper schedules and stress; right shows a clean dashboard with auto-resolved conflicts highlighted in green. No stock photo faces — use dashboard screenshot with real UI."
+          },
+          "retargeting_ad": {
+            "primary_text": "You looked at Rosterwise. You haven't booked a demo yet.\n\nFair — it's a big decision. So here's what we offer instead of a sales call:\n\nA 15-minute screen share where we load your real schedule data (with fake names) and show you exactly what would have been different last week.\n\nNo commitment. No pitch deck. Just your data in the tool.\n\n[Book the 15-minute session →]",
+            "headline": "See Your Schedule in Rosterwise",
+            "cta_button": "Book 15-Min Session"
+          }
+        },
+        "ab_test_matrix": {
+          "variable": "Hook type",
+          "versions": [
+            {"version": "A", "hook_type": "Time-loss", "hook": "12 hours/week on scheduling. What else could your team do with that time?"},
+            {"version": "B", "hook_type": "Risk/conflict", "hook": "Every scheduling conflict is a compliance risk. Here's how hospitals are eliminating them."},
+            {"version": "C", "hook_type": "Social proof", "hook": "200 hospital systems automated their scheduling last year. Here's what changed."}
+          ],
+          "recommendation": "Test A vs B first — time-loss and risk are the two strongest motivators for this buyer. Run for 2 weeks or 100 leads, whichever comes first."
+        }
+      }
+    }
+  ]
+}

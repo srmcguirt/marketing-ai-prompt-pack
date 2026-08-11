@@ -1,0 +1,54 @@
+{
+  "prompt_name": "Analytics Report Narrator",
+  "examples": [
+    {
+      "id": 1,
+      "scenario": "Monthly digital marketing performance report for CMO",
+      "input": {
+        "period": "July 2026",
+        "comparison": "June 2026 and July 2025",
+        "channels": ["Organic Search", "Paid Search", "Email", "LinkedIn Organic"],
+        "goal": "200 MQLs/month",
+        "audience": "CMO + marketing team",
+        "raw_data": {
+          "total_mqls": 187,
+          "mqls_target": 200,
+          "organic_sessions": 42300,
+          "organic_sessions_prev": 38100,
+          "paid_spend": 18500,
+          "paid_mqls": 94,
+          "paid_cpa": 196.8,
+          "email_open_rate": 0.31,
+          "email_click_rate": 0.048,
+          "linkedin_impressions": 128000,
+          "linkedin_clicks": 3840
+        }
+      },
+      "output": {
+        "executive_summary": "July delivered 187 MQLs — 7% below our 200 target, but organic search grew 11% MoM and is trending to hit target by September without paid support increases. Paid search performance was strong (CPA: $196 vs $230 target), but LinkedIn organic reach dropped 23% after a platform algorithm change in mid-July. Recommendation: pause the 3 underperforming LinkedIn ad sets and reallocate $2,400 to Google Search — our best-performing channel this month.",
+        "scorecard": [
+          {"metric": "Total MQLs", "target": 200, "actual": 187, "vs_target": "-6.5%", "vs_prior": "+12%"},
+          {"metric": "Organic Sessions", "target": 40000, "actual": 42300, "vs_target": "+5.8%", "vs_prior": "+11%"},
+          {"metric": "Paid CPA", "target": "$230", "actual": "$196.80", "vs_target": "-14.4%", "vs_prior": "-8%"},
+          {"metric": "Email Open Rate", "target": "28%", "actual": "31%", "vs_target": "+3pts", "vs_prior": "+2pts"},
+          {"metric": "LinkedIn Reach", "target": "150K impressions", "actual": "128K", "vs_target": "-14.7%", "vs_prior": "-23%"}
+        ],
+        "channel_narratives": {
+          "organic_search": "Organic delivered 93 MQLs at $0 marginal cost — our most efficient channel this month. The 11% session growth was driven by 3 blog posts published in May/June now ranking on page 1 for high-intent queries. 'Best CRM for agencies' moved from #8 to #3 this month — the single highest-traffic ranking change of the quarter. Watch: 2 articles from Q1 are declining; they need a content refresh before September or we lose those rankings.",
+          "paid_search": "Paid Search generated 94 MQLs at $196.80 CPA — well below our $230 target. The Brand campaign continues to outperform (CPA $62), but Non-Brand improved from $285 last month to $241 this month after the negative keyword expansion we ran June 28. The new PMAX campaign is still in learning phase — recommend not adjusting bids until August 14.",
+          "email": "Email performed above average this month. Open rate reached 31% — best in 8 months — driven by the subject line test we ran on the nurture sequence (winner: curiosity hook over benefit hook, +4.2pp open rate difference). Click rate of 4.8% is below our 6% target. Next test: CTA placement — currently bottom of email only."
+        },
+        "recommendations": [
+          {"priority": 1, "action": "Pause 3 LinkedIn ad sets (IDs: LI-447, LI-449, LI-451) — all underperforming at CPA >$380, reallocate $2,400 to Google Search — Brand Exact and Top Non-Brand", "expected_impact": "Est. +12-15 MQLs/month based on Google's current efficiency"},
+          {"priority": 2, "action": "Refresh 2 declining organic articles ('SaaS pricing models' and 'product-led growth guide') — add 2026 data, expand FAQ sections, target 2,500 words", "expected_impact": "Recover ~15 organic sessions/day by October"},
+          {"priority": 3, "action": "Run email CTA placement test — add CTA button at top of email (after paragraph 1) vs. current bottom-only placement", "expected_impact": "If mid-email CTA wins by 1pp, adds est. 8-12 clicks/1000 emails"}
+        ],
+        "watchlist": [
+          {"status": "🔴 URGENT", "item": "PMAX campaign bid strategy auto-optimizing incorrectly — it's optimizing for form fills but our form has a pre-qualification bug. Fix form tracking BEFORE August 14 or PMAX will mislearn."},
+          {"status": "🟡 WATCH", "item": "LinkedIn algorithm change in July reduced organic reach 23%. Competitors report same. Monitor August — if reach doesn't recover, shift LinkedIn budget to content amplification rather than paid campaigns."},
+          {"status": "🟢 OPPORTUNITY", "item": "Email open rate hit 31% — highest in 8 months. This sequence is warmer than usual. Consider moving bottom-funnel offers (demo request, trial) to email 4 in the nurture sequence (currently email 6)."}
+        ]
+      }
+    }
+  ]
+}

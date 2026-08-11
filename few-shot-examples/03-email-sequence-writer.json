@@ -1,0 +1,125 @@
+{
+  "prompt_name": "Email Sequence Writer",
+  "examples": [
+    {
+      "id": 1,
+      "scenario": "SaaS free trial welcome sequence — 5 emails",
+      "input": {
+        "product": "Notion-style workspace for product teams",
+        "trigger": "User just started free trial",
+        "goal": "Convert trial users to paid ($29/mo) within 14 days",
+        "audience": "Product managers at tech startups, 25-40",
+        "tone": "Warm, smart, gets to the point"
+      },
+      "output": {
+        "sequence_map": "Day 0 → Day 1 → Day 3 → Day 7 → Day 12",
+        "emails": [
+          {
+            "email_number": 1,
+            "day": 0,
+            "theme": "The fast start — get them to first value in 5 min",
+            "subject_lines": [
+              "A: Your workspace is ready (5-min quick start inside)",
+              "B: The one thing to do in your first 5 minutes",
+              "C: Don't skip this — it determines whether this sticks"
+            ],
+            "preview_text": "Most people skip this and regret it later.",
+            "body": "Your trial just started. Here's the one thing that separates people who love this 30 days later from people who don't:\n\nCreate your first real project — not a test project, not 'sandbox' — something you're actually working on.\n\n[→ Start your first real project](link)\n\nTakes 4 minutes. And everything clicks once you have real data in it.\n\nI'll be here if you have questions.\n\n— [Name]\nFounder, [Product]\n\nP.S. Reply to this email. Seriously — I read every one.",
+            "cta": "Start your first real project →",
+            "notes": "Plain text only. Founder signature builds trust. Encourage replies — this is also research."
+          },
+          {
+            "email_number": 2,
+            "day": 1,
+            "theme": "The aha moment — show them the thing that changes how they work",
+            "subject_lines": [
+              "A: The feature product teams use 100x more than they expected",
+              "B: This is why our users stopped using Jira",
+              "C: Have you tried [Feature] yet?"
+            ],
+            "preview_text": "It takes 90 seconds to set up. Most people don't find it on their own.",
+            "body": "Most teams who try [Product] discover the [connected docs + tasks] feature by accident.\n\nThen they reorganize their entire workflow around it.\n\nHere's what it does:\nYou write a spec → tasks automatically link to it → when a developer comments on the task, it shows up in the spec.\n\nOne source of truth. No more Slack threads asking 'wait, which version is final?'\n\nSet it up for one project right now:\n[→ Connect my first doc to tasks](link)\n\nIt's the thing that makes the rest of it click.\n\n— [Name]\n\nP.S. Tomorrow I'll show you how [Company Name] used this to cut their weekly sync from 90 minutes to 20.",
+            "cta": "Connect my first doc to tasks →"
+          },
+          {
+            "email_number": 3,
+            "day": 3,
+            "theme": "Social proof + objection removal — they're starting to wonder if it's worth paying",
+            "subject_lines": [
+              "A: How [Real Company] cut meeting time by 60% (specific story)",
+              "B: 'I was skeptical after Notion burned us' — what changed",
+              "C: The PM who almost cancelled her trial"
+            ],
+            "preview_text": "She almost quit after day 2. Here's why she's still here at month 7.",
+            "body": "Sarah was three days into her trial and ready to quit.\n\n'It felt like Notion with extra steps,' she told me later.\n\nThen her team had their first sprint planning in [Product].\n\nNot a demo sprint. A real one, with real tickets, a real deadline, and four engineers who had no patience for broken tools.\n\nSix months later, she's a paying customer, she's expanded from her team of 5 to her company of 80, and she wrote us a case study.\n\nThe specific thing that changed her mind? [Read the full story →](link)\n\n(It's a 3-minute read. And if her situation sounds like yours, it'll probably change yours too.)\n\n— [Name]",
+            "cta": "Read Sarah's story →"
+          },
+          {
+            "email_number": 4,
+            "day": 7,
+            "theme": "Value deepening — show them something they haven't discovered yet",
+            "subject_lines": [
+              "A: The [Product] feature most teams find in month 3 (you can have it now)",
+              "B: 7 days in — have you tried this?",
+              "C: What your trial data tells us about your workflow"
+            ],
+            "preview_text": "The power users all use this. Most people find it by accident.",
+            "body": "One week in. Here's something the teams who get the most value always have in common:\n\nThey set up [Automation Feature].\n\nSpecifically: when a task moves to 'Done,' it automatically pings the relevant doc and logs a changelog entry.\n\nZero manual updates. Zero 'did you ship that?' Slack messages.\n\nHere's how to set it up in 3 steps:\n1. Go to Settings → Automations\n2. Choose 'Task Status Change' trigger\n3. Connect to your project doc\n\n[→ Set up my first automation](link)\n\nIf this saves you 30 minutes a week, that's 26 hours this year.\n\n— [Name]\n\nP.S. Your trial ends in 7 days. Here's what's included in the paid plan: [link to pricing]",
+            "cta": "Set up my first automation →",
+            "notes": "Soft pricing mention here — not pushy, but plant the seed."
+          },
+          {
+            "email_number": 5,
+            "day": 12,
+            "theme": "The close — trial ends in 2 days",
+            "subject_lines": [
+              "A: Your trial ends in 48 hours",
+              "B: Before you go — one question",
+              "C: 2 days left (and a question for you)"
+            ],
+            "preview_text": "If it's not clicking, I want to know why.",
+            "body": "Your trial ends in 2 days.\n\nIf [Product] has become part of how your team works — upgrading takes 90 seconds:\n[→ Upgrade now — $29/month](link)\n\nIf it hasn't clicked yet, I'd genuinely like to know why.\n\nHit reply and tell me: what was supposed to work that didn't?\n\nI ask because we've built every major feature based on exactly this kind of feedback. And if something's broken or missing for your use case, I want to know.\n\n— [Name]\n\nP.S. If you upgrade today, you get access to [Bonus Feature] that's launching next week. Early access for everyone who upgrades before Friday.",
+            "cta": "Upgrade now →",
+            "segmentation": "Non-openers after email 4: send re-engagement variant with subject 'Did this end up in the wrong inbox?'"
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "scenario": "E-commerce abandoned cart — 3 emails",
+      "input": {
+        "product": "Premium leather wallet ($89)",
+        "trigger": "Added to cart, no purchase after 1 hour",
+        "goal": "Recover the sale",
+        "tone": "Friendly, not pushy"
+      },
+      "output": {
+        "emails": [
+          {
+            "email_number": 1,
+            "timing": "1 hour after abandonment",
+            "subject_lines": ["A: Still thinking it over?", "B: You left something behind", "C: Your cart is saved (for now)"],
+            "body": "Looks like life got in the way.\n\nYour cart is still saved — your [Product Name] is waiting.\n\n[→ Complete your order](link)\n\nAny questions? Reply here — real humans answer within 2 hours.",
+            "cta": "Complete my order →"
+          },
+          {
+            "email_number": 2,
+            "timing": "24 hours after abandonment",
+            "subject_lines": ["A: This is what makes it different", "B: Before you decide — one thing worth knowing", "C: The question we get asked most before someone buys"],
+            "body": "The most common question we get before someone orders:\n\n'Is it really worth $89 for a wallet?'\n\nHonest answer: For most people, no. A $20 wallet holds cards.\n\nBut if you've ever had a wallet:\n- Fall apart at the seams after 8 months\n- Crack in cold weather\n- Bulk up until it sits sideways in your pocket\n\nThis one doesn't do any of those things.\n\nWe use full-grain leather — the same grade used in quality belts and shoes that last decades. Not bonded leather. Not 'genuine leather' (which is the lowest possible grade). Full-grain.\n\nAnd we back it with a lifetime warranty — if it ever fails, we replace it.\n\n[→ Complete your order](link)\n\nOr reply if you have questions.",
+            "cta": "Complete my order →"
+          },
+          {
+            "email_number": 3,
+            "timing": "48 hours after abandonment",
+            "subject_lines": ["A: Last call — your cart expires tonight", "B: One final thing (then I'll stop)", "C: This is the last one (I promise)"],
+            "body": "Cart expires at midnight tonight.\n\nIf the price was the hesitation — use FIRST10 for 10% off your first order.\n\n[→ Claim 10% off now](link)\n\nIf it wasn't the price — no hard feelings. Let me know what held you back and I'll make sure we fix it for the next person.\n\n— [Founder Name], [Brand]",
+            "cta": "Claim 10% off →",
+            "notes": "Only use discount if margin allows. Test 'no discount' vs 'discount' version — often conversion rate is similar but margin is better without."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "prompt_name": "Brand Voice Architect",
+  "examples": [
+    {
+      "id": 1,
+      "scenario": "Brand voice development for B2B fintech startup",
+      "input": {
+        "company": "Ledgr — automated financial reporting for CFOs",
+        "stage": "Series A, 45 employees",
+        "audience": "CFOs and finance directors at mid-market companies ($10M-$200M revenue)",
+        "values": ["Radical transparency", "Speed without recklessness", "Partnership not vendor"],
+        "competitor_voice_to_avoid": "Bland enterprise SaaS speak (Sage, Quickbooks) — corporate, safe, boring"
+      },
+      "output": {
+        "voice_dna": [
+          {
+            "dimension": "Expert Without Being Elitist",
+            "one_sentence": "We know more about financial reporting than most, and we share that knowledge freely — without talking down.",
+            "we_do": [
+              "Use finance terminology correctly and confidently",
+              "Explain complex concepts plainly when needed",
+              "Cite real numbers and research",
+              "Acknowledge when something is genuinely hard"
+            ],
+            "we_dont": [
+              "Use jargon to sound impressive",
+              "Oversimplify to the point of being condescending",
+              "Pretend everything is easy"
+            ],
+            "on_brand_example": "Month-end close takes most finance teams 5-8 business days. It doesn't have to. Here's why it takes that long — and what changes when you remove the manual steps.",
+            "off_brand_example": "Leverage our cutting-edge, AI-powered financial automation solution to synergistically optimize your close process and drive stakeholder value."
+          },
+          {
+            "dimension": "Direct Without Being Blunt",
+            "one_sentence": "We say what we mean. We don't soften everything into corporate mush, but we're not unnecessarily harsh.",
+            "we_do": [
+              "Lead with the conclusion, then explain",
+              "Use active voice",
+              "Say 'you' and 'we' — not 'clients' and 'the platform'"
+            ],
+            "we_dont": [
+              "Use passive voice to avoid ownership",
+              "Hedge every statement with 'may' and 'might'",
+              "Start sentences with 'In order to'"
+            ],
+            "on_brand_example": "Your close process is slow because you're reconciling in spreadsheets. We fix that.",
+            "off_brand_example": "In order to potentially address the challenges that may be associated with the month-end close process, our solution offers a range of capabilities that could be beneficial."
+          }
+        ],
+        "voice_spectrum": {
+          "formal_to_conversational": {"score": 6, "description": "Professional but human — like a smart colleague, not a legal document"},
+          "reserved_to_expressive": {"score": 4, "description": "Measured. We let the data do the emoting."},
+          "serious_to_playful": {"score": 3, "description": "Finance is serious. We can be wry but never glib."},
+          "abstract_to_concrete": {"score": 9, "description": "Always specific. Always numbers. Always examples."},
+          "we_to_you": {"score": 8, "description": "Reader-first. Their problem, their outcome, their time."}
+        },
+        "banned_words": [
+          {"word": "Leverage (as verb)", "why": "Overused, meaningless", "use_instead": "use"},
+          {"word": "Synergy", "why": "Corporate nonsense", "use_instead": "working together"},
+          {"word": "Solution", "why": "Vague — everything is a 'solution'", "use_instead": "software / tool / [specific thing]"},
+          {"word": "Excited to announce", "why": "Every company is 'excited'", "use_instead": "We built [thing]. Here's why."},
+          {"word": "Journey", "why": "Overused in marketing", "use_instead": "process / path / work"},
+          {"word": "Empower", "why": "Means nothing specific", "use_instead": "give you / let you / enable"},
+          {"word": "Best-in-class", "why": "Self-serving claim without evidence", "use_instead": "[specific proof]"},
+          {"word": "Seamlessly", "why": "Everything claims to be seamless", "use_instead": "in X minutes / without [frustration]"}
+        ],
+        "quick_reference_card": {
+          "we_are": ["Direct", "Data-driven", "Partnership-oriented"],
+          "we_are_not": ["Corporate", "Salesy", "Vague"],
+          "top_5_rules": [
+            "Lead with the answer, then explain",
+            "Use specific numbers, not ranges or approximations",
+            "Write 'you close faster' not 'the close process becomes more efficient'",
+            "Never use passive voice when active voice is possible",
+            "If you can cut a word without losing meaning, cut it"
+          ],
+          "on_brand_examples": [
+            "Month-end close in 2 days. Not a promise — a result 340 CFOs have measured.",
+            "We don't do enterprise contracts. Month-to-month, full access, cancel any time.",
+            "Your auditors will see the same data you see, in real time. No more prep work before audits."
+          ]
+        }
+      }
+    }
+  ]
+}

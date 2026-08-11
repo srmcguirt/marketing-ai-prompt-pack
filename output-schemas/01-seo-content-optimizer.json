@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SEO Optimization Report",
+  "description": "Structured output schema for the SEO Content Optimizer prompt",
+  "type": "object",
+  "required": ["page_title", "intent_match", "keyword_map", "meta_tags", "content_issues", "recommendations", "technical_checklist"],
+  "properties": {
+    "page_title": {"type": "string"},
+    "intent_match": {
+      "type": "object",
+      "required": ["status", "intent_type", "notes"],
+      "properties": {
+        "status": {"type": "string", "enum": ["matched", "partial_match", "mismatch"]},
+        "intent_type": {"type": "string", "enum": ["informational", "navigational", "transactional", "commercial_investigation"]},
+        "notes": {"type": "string"}
+      }
+    },
+    "keyword_map": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["keyword", "type", "recommended_placement"],
+        "properties": {
+          "keyword": {"type": "string"},
+          "type": {"type": "string", "enum": ["primary", "secondary", "lsi", "question", "entity"]},
+          "recommended_placement": {"type": "string"},
+          "current_usage": {"type": "string"}
+        }
+      }
+    },
+    "meta_tags": {
+      "type": "object",
+      "required": ["title", "description", "slug"],
+      "properties": {
+        "title": {"type": "string", "maxLength": 60},
+        "description": {"type": "string", "maxLength": 160},
+        "slug": {"type": "string", "pattern": "^/[a-z0-9-]+$"}
+      }
+    },
+    "content_issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["severity", "issue", "fix"],
+        "properties": {
+          "severity": {"type": "string", "enum": ["critical", "high", "medium", "low"]},
+          "issue": {"type": "string"},
+          "fix": {"type": "string"}
+        }
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["priority", "action", "impact"],
+        "properties": {
+          "priority": {"type": "integer", "minimum": 1},
+          "action": {"type": "string"},
+          "impact": {"type": "string"}
+        }
+      }
+    },
+    "technical_checklist": {
+      "type": "object",
+      "properties": {
+        "h1_contains_keyword": {"type": "boolean"},
+        "first_paragraph_answers_query": {"type": "boolean"},
+        "faq_schema_recommended": {"type": "boolean"},
+        "internal_links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "anchor_text": {"type": "string"},
+              "target_url": {"type": "string"}
+            }
+          }
+        },
+        "schema_type": {"type": "string"}
+      }
+    },
+    "estimated_impact": {"type": "string"}
+  }
+}

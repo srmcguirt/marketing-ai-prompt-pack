@@ -1,0 +1,74 @@
+{
+  "prompt_name": "Landing Page Copywriter",
+  "examples": [
+    {
+      "id": 1,
+      "scenario": "SaaS free trial landing page",
+      "input": {
+        "product": "Draftly — AI writing assistant for technical content",
+        "offer": "14-day free trial, no credit card",
+        "audience": "Technical writers and developer advocates at SaaS companies",
+        "primary_differentiator": "Trained on technical documentation, not general text — doesn't hallucinate APIs or code examples",
+        "existing_social_proof": "Used by teams at Stripe, Vercel, Figma"
+      },
+      "output": {
+        "above_fold": {
+          "h1": "Write Better Technical Docs — In Half the Time",
+          "subheadline": "Draftly is the AI writing assistant trained on developer docs, not blog posts. It understands APIs, code examples, and technical accuracy — and it shows.",
+          "hero_visual_brief": "Split screen: left shows a developer staring at a blank doc, right shows Draftly auto-completing a well-structured API reference with code examples. Subtle green checkmarks next to code snippets.",
+          "primary_cta": "Start Writing Free — No Card Needed",
+          "social_proof_snippet": "Trusted by technical writers at Stripe, Vercel, and Figma"
+        },
+        "problem_section": {
+          "headline": "Technical writing is painful. It shouldn't be.",
+          "pain_points": [
+            "You spend 4 hours on a tutorial that readers skim in 4 minutes",
+            "Generic AI tools suggest code examples that don't actually work",
+            "Your docs backlog grows faster than you can write",
+            "Every API update means manually hunting down every affected doc",
+            "You're the only one who writes docs — and the team keeps adding features"
+          ],
+          "bridge": "What if you had an AI that actually understood what you were writing — and got it right?"
+        },
+        "features_benefits": [
+          {
+            "feature": "Technical context awareness",
+            "benefit_headline": "It knows what your code does — not just what you typed",
+            "elaboration": "Paste a code snippet and Draftly explains it accurately. Not a generic paraphrase — a technically correct explanation a developer would write. First AI writing tool our team hasn't had to fact-check.",
+            "icon": "🔧"
+          },
+          {
+            "feature": "Doc structure templates",
+            "benefit_headline": "Start with the right structure, every time",
+            "elaboration": "Quickstart guides, API references, tutorials, changelogs — each has a proven structure that readers expect. Draftly enforces it so you spend time on content, not formatting debates.",
+            "icon": "📐"
+          },
+          {
+            "feature": "Version-aware rewriting",
+            "benefit_headline": "Update your docs when your API updates — automatically",
+            "elaboration": "Connect your GitHub repo. When a function signature changes, Draftly flags every doc that references it and suggests the updated copy. The doc backlog that never ends — finally manageable.",
+            "icon": "🔄"
+          }
+        ],
+        "testimonials": [
+          {
+            "quote": "I was skeptical because every 'AI writer' I'd tried was useless for technical content — it would just confidently hallucinate wrong API responses. Draftly is the first one that I don't have to babysit. I gave it our OpenAPI spec and asked it to draft an authentication guide. The draft was 80% publishable on the first pass. That's never happened before with any tool.",
+            "attribution": "Maya Chen, Staff Technical Writer, [Company]",
+            "result": "Reduced first-draft time from 4 hours to 45 minutes"
+          }
+        ],
+        "faq": [
+          {"q": "Will it hallucinate code examples?", "a": "Less than any other tool we've tested. We trained specifically on technical documentation — not fiction, marketing copy, or general text. We also flag when we're uncertain about a code example, rather than guessing. You're still the expert; we're the assistant."},
+          {"q": "How is this different from GitHub Copilot?", "a": "Copilot writes code. Draftly writes the documentation, tutorials, and reference material that explains the code. They're complementary — many of our users use both."},
+          {"q": "We have a custom doc style guide. Can Draftly follow it?", "a": "Yes. Upload your style guide in Settings and Draftly references it for every suggestion. Our Teams plan includes style guide sync across your entire team."}
+        ],
+        "final_cta": {
+          "headline": "Your docs backlog isn't going to write itself.",
+          "bullets": ["14-day free trial", "Full access — no feature limits", "Onboarding call with a technical writer on our team", "Cancel anytime (you won't)"],
+          "cta_button": "Get Started Free — Takes 90 Seconds",
+          "risk_reversal": "No credit card. No automatic charges. If you don't love it, email us and we'll help you export everything you wrote."
+        }
+      }
+    }
+  ]
+}
