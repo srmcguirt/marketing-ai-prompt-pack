@@ -112,7 +112,7 @@ Conversion rate difference: 2x–4x typical in real-world testing.
 4. Fill in the `[PLACEHOLDER]` sections with your actual details
 5. Send and get campaign-ready output
 
-Works with: **Claude** (best results), **GPT-4 / o1**, **Gemini**, **Cursor**, **Cline**
+Works with: **Claude** (best results), **GPT-5.6**, **Gemini**, **Cursor**, **Cline**
 
 ### Option 2: Use as a custom instruction / system prompt
 
@@ -141,7 +141,7 @@ with open("output-schemas/01-seo-content-optimizer.json") as f:
 
 # Run with structured output
 response = client.messages.create(
-    model="claude-opus-4-5",
+    model="claude-opus-5",
     max_tokens=4096,
     system=system_prompt,
     messages=[{
@@ -230,7 +230,7 @@ marketing-ai-prompt-pack/
 
 3. **Iterate, don't regenerate** — if output is 80% right, paste it back and say "Fix section 3 to be more specific about X." Don't start over.
 
-4. **Claude performs best** with these prompts due to stronger instruction following and longer context. GPT-4 works well for most prompts. Gemini can handle all of them.
+4. **Claude performs best** with these prompts due to stronger instruction following and longer context. GPT-5.6 works well for most prompts. Gemini can handle all of them.
 
 5. **Use the few-shot examples** as guidance — if your output doesn't look like the examples in `few-shot-examples/`, add more context about your audience and product.
 
