@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](./LICENSE) [![Prompts](https://img.shields.io/badge/Prompts-8-orange?style=flat-square)](./system-prompts/) [![GitHub stars](https://img.shields.io/github/stars/srmcguirt/marketing-ai-prompt-pack?style=flat-square)](https://github.com/srmcguirt/marketing-ai-prompt-pack)
 
-**8 expert-level AI prompt templates for marketing professionals and agencies.** 
+**8 expert-level AI prompt templates for marketing professionals and agencies.**  
 Stop getting generic outputs. Start getting campaign-ready results.
 
 > Built by **WireForge** — production-grade AI tools for professionals.
@@ -51,24 +51,24 @@ Every prompt follows our **4-Layer Prompt Architecture** — a methodology we de
 
 ```
 ┌─────────────────────────────────────────────┐
-│ Layer 1: IDENTITY │
-│ Senior role + specific experience scope │
-│ "You've run campaigns with $500K+ budgets" │
+│  Layer 1: IDENTITY                          │
+│  Senior role + specific experience scope    │
+│  "You've run campaigns with $500K+ budgets" │
 ├─────────────────────────────────────────────┤
-│ Layer 2: GUARDRAILS │
-│ 10-15 behavioral constraints that prevent │
-│ common AI failure modes in marketing │
-│ "Never use fake urgency or scarcity" │
+│  Layer 2: GUARDRAILS                        │
+│  10-15 behavioral constraints that prevent  │
+│  common AI failure modes in marketing       │
+│  "Never use fake urgency or scarcity"       │
 ├─────────────────────────────────────────────┤
-│ Layer 3: OUTPUT BLUEPRINT │
-│ Exact section-by-section format — the AI │
-│ produces structured deliverables, not │
-│ freeform essays you have to reformat │
+│  Layer 3: OUTPUT BLUEPRINT                  │
+│  Exact section-by-section format — the AI   │
+│  produces structured deliverables, not      │
+│  freeform essays you have to reformat       │
 ├─────────────────────────────────────────────┤
-│ Layer 4: EDGE CASE LIBRARY │
-│ 7-8 specific scenarios (regulated │
-│ industries, cold vs warm traffic, multi- │
-│ market campaigns) that trip up generic AI │
+│  Layer 4: EDGE CASE LIBRARY                 │
+│  7-8 specific scenarios (regulated          │
+│  industries, cold vs warm traffic, multi-   │
+│  market campaigns) that trip up generic AI  │
 └─────────────────────────────────────────────┘
 ```
 
@@ -112,7 +112,7 @@ Conversion rate difference: 2x–4x typical in real-world testing.
 4. Fill in the `[PLACEHOLDER]` sections with your actual details
 5. Send and get campaign-ready output
 
-Works with: **Claude** (best results), **GPT-4o / GPT-5**, **Gemini**, **Cursor**, **Cline**
+Works with: **Claude** (best results), **GPT-4 / o1**, **Gemini**, **Cursor**, **Cline**
 
 ### Option 2: Use as a custom instruction / system prompt
 
@@ -133,21 +133,21 @@ client = anthropic.Anthropic()
 
 # Load the prompt
 with open("system-prompts/01-seo-content-optimizer.md") as f:
- system_prompt = f.read()
+    system_prompt = f.read()
 
-# Load the schema 
+# Load the schema  
 with open("output-schemas/01-seo-content-optimizer.json") as f:
- schema = json.load(f)
+    schema = json.load(f)
 
 # Run with structured output
 response = client.messages.create(
- model="claude-opus-4-5",
- max_tokens=4096,
- system=system_prompt,
- messages=[{
- "role": "user",
- "content": f"Optimize this content:\nKeyword: {target_keyword}\nContent: {article_content}"
- }]
+    model="claude-opus-4-5",
+    max_tokens=4096,
+    system=system_prompt,
+    messages=[{
+        "role": "user",
+        "content": f"Optimize this content:\nKeyword: {target_keyword}\nContent: {article_content}"
+    }]
 )
 ```
 
@@ -167,27 +167,27 @@ When I say /email, use the Email Sequence Writer from [path/to/prompts/03-email-
 ```
 marketing-ai-prompt-pack/
 ├── system-prompts/
-│ ├── 01-seo-content-optimizer.md
-│ ├── 02-social-media-campaign-planner.md
-│ ├── 03-email-sequence-writer.md
-│ ├── 04-landing-page-copywriter.md
-│ ├── 05-ad-copy-generator.md
-│ ├── 06-brand-voice-architect.md
-│ ├── 07-content-calendar-strategist.md
-│ └── 08-analytics-report-narrator.md
+│   ├── 01-seo-content-optimizer.md
+│   ├── 02-social-media-campaign-planner.md
+│   ├── 03-email-sequence-writer.md
+│   ├── 04-landing-page-copywriter.md
+│   ├── 05-ad-copy-generator.md
+│   ├── 06-brand-voice-architect.md
+│   ├── 07-content-calendar-strategist.md
+│   └── 08-analytics-report-narrator.md
 ├── few-shot-examples/
-│ ├── 01-seo-content-optimizer.json
-│ ├── 02-social-media-campaign-planner.json
-│ ├── 03-email-sequence-writer.json
-│ ├── 04-landing-page-copywriter.json
-│ ├── 05-ad-copy-generator.json
-│ ├── 06-brand-voice-architect.json
-│ ├── 07-content-calendar-strategist.json
-│ └── 08-analytics-report-narrator.json
+│   ├── 01-seo-content-optimizer.json
+│   ├── 02-social-media-campaign-planner.json
+│   ├── 03-email-sequence-writer.json
+│   ├── 04-landing-page-copywriter.json
+│   ├── 05-ad-copy-generator.json
+│   ├── 06-brand-voice-architect.json
+│   ├── 07-content-calendar-strategist.json
+│   └── 08-analytics-report-narrator.json
 ├── output-schemas/
-│ ├── 01-seo-content-optimizer.json
-│ ├── 08-analytics-report-narrator.json
-│ └── ... (all 8 schemas)
+│   ├── 01-seo-content-optimizer.json
+│   ├── 08-analytics-report-narrator.json
+│   └── ... (all 8 schemas)
 ├── README.md
 ├── LICENSE
 └── CHANGELOG.md
@@ -212,11 +212,11 @@ marketing-ai-prompt-pack/
 
 ## Who This Is For
 
-✅ **Marketing managers** building and executing campaigns solo or with small teams 
-✅ **Growth marketers** who use AI daily and want to 10x their output quality 
-✅ **Marketing agencies** delivering work to multiple clients 
-✅ **Founders and solopreneurs** doing their own marketing 
-✅ **Content creators** and **copywriters** who want AI to be their research and structure partner, not their ghostwriter 
+✅ **Marketing managers** building and executing campaigns solo or with small teams  
+✅ **Growth marketers** who use AI daily and want to 10x their output quality  
+✅ **Marketing agencies** delivering work to multiple clients  
+✅ **Founders and solopreneurs** doing their own marketing  
+✅ **Content creators** and **copywriters** who want AI to be their research and structure partner, not their ghostwriter  
 
 **Not for:** Someone who wants AI to replace thinking. These prompts make AI work harder — but you still direct the strategy.
 
@@ -230,7 +230,7 @@ marketing-ai-prompt-pack/
 
 3. **Iterate, don't regenerate** — if output is 80% right, paste it back and say "Fix section 3 to be more specific about X." Don't start over.
 
-4. **Claude performs best** with these prompts due to stronger instruction following and longer context. GPT-4o and GPT-5 work well for most prompts. Gemini can handle all of them.
+4. **Claude performs best** with these prompts due to stronger instruction following and longer context. GPT-4 works well for most prompts. Gemini can handle all of them.
 
 5. **Use the few-shot examples** as guidance — if your output doesn't look like the examples in `few-shot-examples/`, add more context about your audience and product.
 
@@ -262,7 +262,7 @@ Check `CHANGELOG.md` for version history.
 
 ## License
 
-MIT — free to use, modify, and integrate into your own tools and workflows. 
+MIT — free to use, modify, and integrate into your own tools and workflows.  
 Attribution appreciated but not required.
 
 ---
