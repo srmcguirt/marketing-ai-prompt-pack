@@ -1,11 +1,11 @@
-# 📣 WireForge — Marketing AI Prompt Pack
+# 📣 Marketing AI Prompt Pack
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](./LICENSE) [![Prompts](https://img.shields.io/badge/Prompts-8-orange?style=flat-square)](./system-prompts/) [![GitHub stars](https://img.shields.io/github/stars/srmcguirt/marketing-ai-prompt-pack?style=flat-square)](https://github.com/srmcguirt/marketing-ai-prompt-pack)
 
 **8 expert-level AI prompt templates for marketing professionals and agencies.**  
 Stop getting generic outputs. Start getting campaign-ready results.
 
-> Built by **WireForge** — production-grade AI tools for professionals.
+> Built by **Shane McGuirt** — production-grade AI tools for professionals.
 
 > 💎 **Full pack** with all 8 prompts, few-shot examples, output schemas, and future updates → **[Get it on Gumroad ($49) →](https://srmcguirt.gumroad.com)**
 >
@@ -76,7 +76,7 @@ Every prompt follows our **4-Layer Prompt Architecture** — a methodology we de
 
 ### The Brief Test™
 
-Every prompt passes the **WireForge Brief Test**: can you hand the output directly to a copywriter, media buyer, or client as a working brief? If it needs a rewrite before it's useful, the prompt isn't done. That's our standard.
+Every prompt passes the **Brief Test**: can you hand the output directly to a copywriter, media buyer, or client as a working brief? If it needs a rewrite before it's useful, the prompt isn't done. That's the standard.
 
 ---
 
@@ -87,7 +87,7 @@ Every prompt passes the **WireForge Brief Test**: can you hand the output direct
 
 **Output:** Generic headline. Vague bullets. Template-sounding copy that converts at 1%.
 
-### ✅ WireForge Landing Page Copywriter
+### ✅ Landing Page Copywriter prompt
 > *[Paste the prompt, fill in your product details, audience, differentiator, social proof]*
 
 **Output:** 
@@ -267,9 +267,9 @@ Attribution appreciated but not required.
 
 ---
 
-## About WireForge
+## About
 
-WireForge builds production-grade AI tools for professionals — prompt packs, MCP servers, agent boilerplates, and more.
+Shane McGuirt builds production-grade AI tools for professionals — prompt packs, MCP servers, agent boilerplates, and more.
 
 - 🌐 [srmcguirt.dev](https://srmcguirt.dev)
 - 🐙 [github.com/srmcguirt](https://github.com/srmcguirt)
