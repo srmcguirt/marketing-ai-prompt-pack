@@ -9,7 +9,7 @@ Stop getting generic outputs. Start getting campaign-ready results.
 
 > 💎 **Full pack** with all 8 prompts, few-shot examples, output schemas, and future updates → **[Get it on Gumroad ($49) →](https://srmcguirt.gumroad.com)**
 >
-> 📬 **Free sample prompt** — [subscribe at srmcguirt.github.io](https://srmcguirt.github.io)
+> 📬 **Free sample prompt** — [subscribe at wireforge.fellwork.workers.dev](https://wireforge.fellwork.workers.dev)
 
 ---
 
@@ -247,6 +247,19 @@ Check `CHANGELOG.md` for version history.
 
 ---
 
+
+---
+
+## 💼 Get the Full Pack
+
+**[Marketing AI Prompt Pack — $29 on Gumroad](https://srmcguirt.gumroad.com/l/marketing-prompt-pack)**
+
+8 specialist system prompts, MIT licensed, plain Markdown — drop into Claude, GPT-4, or Cursor. No vendor lock-in.
+
+→ [Full product lineup](https://wireforge.fellwork.workers.dev)
+
+---
+
 ## License
 
 MIT — free to use, modify, and integrate into your own tools and workflows.  
@@ -258,7 +271,7 @@ Attribution appreciated but not required.
 
 WireForge builds production-grade AI tools for professionals — prompt packs, MCP servers, agent boilerplates, and more.
 
-- 🌐 [wireforge.dev](https://srmcguirt.github.io)
+- 🌐 [wireforge.dev](https://wireforge.fellwork.workers.dev)
 - 🐙 [github.com/srmcguirt](https://github.com/srmcguirt)
 - 🐦 [@wireforge](https://x.com/wireforge)
 
