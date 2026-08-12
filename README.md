@@ -7,7 +7,7 @@ Stop getting generic outputs. Start getting campaign-ready results.
 
 > Built by **Shane McGuirt** — production-grade AI tools for professionals.
 
-> 💎 **Full pack** with all 8 prompts, few-shot examples, output schemas, and future updates → **[Get it on Gumroad ($49) →](https://srmcguirt.gumroad.com)**
+> 💎 **Full pack** with all 8 prompts, few-shot examples, output schemas, and future updates → **[Get it on Gumroad ($29) →](https://srmcguirt.gumroad.com/l/marketing-prompt-pack)**
 >
 > 📬 **Free sample prompt** — [subscribe at srmcguirt.dev](https://srmcguirt.dev)
 
@@ -39,15 +39,15 @@ That's what this pack is.
 **Each prompt includes:**
 - ✅ Detailed role definition and constraints
 - ✅ Step-by-step output structure the AI follows
-- ✅ 3–5 realistic few-shot examples (input → output)
-- ✅ JSON Schema for structured/API use
+- 💎 3–5 realistic few-shot examples (input → output) — full pack
+- 💎 JSON Schema for structured/API use — full pack
 - ✅ Edge case handling (what to do when the situation is complex)
 
 ---
 
 ## ⚡ The Prompt Architecture
 
-Every prompt follows our **4-Layer Prompt Architecture** — a methodology we developed after studying what separates prompts that produce campaign-ready output from prompts that produce generic marketing fluff.
+Every prompt follows a **4-Layer Prompt Architecture** — a structure that emerged from studying what separates prompts that produce campaign-ready output from prompts that produce generic marketing fluff.
 
 ```
 ┌─────────────────────────────────────────────┐
@@ -276,6 +276,6 @@ Shane McGuirt builds production-grade AI tools for professionals — prompt pack
 - 🐦 [@srmcguirt](https://x.com/srmcguirt)
 
 **Other products:**
-- [DevOps AI Prompt Pack](https://srmcguirt.gumroad.com) — 8 prompts for DevOps and infrastructure engineers
-- [MCP Server Starter Kit](https://srmcguirt.gumroad.com) — Production-ready MCP server boilerplate
-- [Claude Agent Boilerplate](https://srmcguirt.gumroad.com) — Build production Claude agents fast
+- [DevOps AI Prompt Pack](https://srmcguirt.gumroad.com/l/marketing-prompt-pack) — 8 prompts for DevOps and infrastructure engineers
+- [MCP Server Starter Kit](https://srmcguirt.gumroad.com/l/marketing-prompt-pack) — Production-ready MCP server boilerplate
+- [Claude Agent Boilerplate](https://srmcguirt.gumroad.com/l/marketing-prompt-pack) — Build production Claude agents fast
